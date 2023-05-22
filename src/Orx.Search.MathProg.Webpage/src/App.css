@@ -1,0 +1,64 @@
+.App {
+  text-align: center;
+}
+
+#root,
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.fade-in {
+  animation: fadeIn 0.75s;
+}
+
+.centered {
+  text-align: center;
+}
+
+.code-block {
+  border: 1px solid tomato;
+}
+
+.img {
+  display: grid;
+  justify-items: center;
+  padding: 2em;
+}
+
+.img>img {
+  border: 1px solid tomato;
+}
+
+.embed {
+  display: grid;
+  justify-items: center;
+}
+
+.embed>iframe {
+  border: 1px solid tomato;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.list>p {
+  line-height: 1.3em;
+}
+
+.list>p::before {
+  content: '◍ ';
+  color: olive;
+}

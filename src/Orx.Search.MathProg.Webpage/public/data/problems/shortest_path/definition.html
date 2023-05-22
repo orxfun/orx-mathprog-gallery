@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script async="true" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"> </script>
+    <style>
+        body {
+            font-family: 'Lucida', monospace;
+            font-size: larger;
+            padding: 3em 15%;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            background-color: gray;
+            margin-top: 2em;
+            padding: 0.5em 1.0em;
+            border-radius: 0.2em;
+            font-size: 1.5em;
+            font-weight: normal;
+        }
+
+        .orx-mathmodel-symbols {
+            padding: 0 2em;
+            display: grid;
+            grid-template-columns: 5em auto auto;
+            column-gap: 1em;
+            row-gap: 1em;
+        }
+
+        .orx-mathmodel-symbols>.title {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            margin-top: 1.0em;
+            border-bottom: 0.1em solid lightgray;
+        }
+
+        .orx-mathmodel-symbol>div {
+            display: flex;
+            align-items: center;
+        }
+
+        .orx-mathmodel {
+            width: 100%;
+            padding: 0 2em;
+        }
+
+        .orx-mathmodel tr {
+            height: 4em;
+        }
+
+        .orx-mathmodel td {
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+
+        .orx-mathmodel tr td:nth-child(1) {
+            text-align: right;
+        }
+
+        .orx-mathmodel-explanations {
+            padding-top: 2em;
+        }
+
+        .orx-mathmodel-explanations ol {
+            list-style-type: none;
+        }
+
+        .orx-mathmodel-explanations li {
+            counter-increment: section;
+        }
+
+        .orx-mathmodel-explanations li::before {
+            content: "(" counter(section) ") ";
+        }
+
+        .orx-mathmodel-explanations strong {
+            font-weight: normal;
+            color: darkred;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Shortest Path Problem</h1>
+
+    <p>
+        <a href="https://en.wikipedia.org/wiki/Shortest_path_problem">Wikipedia</a>
+    </p>
+    <p>
+        In graph theory, the shortest path problem is the problem of finding a path between two vertices (or nodes) in a
+        graph such that the sum of the weights of its constituent edges is minimized.
+    </p>
+    <p>
+        The problem of finding the shortest path between two intersections on a road map may be modeled as a special
+        case of the shortest path problem in graphs, where the vertices correspond to intersections and the edges
+        correspond to road segments, each weighted by the length of the segment.
+    </p>
+
+    <h2>Mathematical Formulation</h2>
+    Let `N` be set of nodes and `(i,j) \in A` be an arc of the graph `G = (N, A)` with weight `w_{ij}`.
+    Further, let `b_i` be 1 if `i` is the source (starting) node; -1 if it is the sink (ending) node; and 0 otherwise.
+    Then, optimal solution to the following program provides the shortest path from source to sink where `x_{ij}` will
+    be 1 if `(i,j)` is on the shortest path. If there exists no path from source to sink, the problem will be
+    infeasible.
+
+    <table class="orx-mathmodel">
+        <tbody>
+            <tr title="dist: minimize total path distance">
+                <td>
+                    `\min`
+                </td>
+                <td>
+                    `\sum_{j\in N} \text{ } \sum_{k \in N:(j,k)\in A} w_{jk} \times x_{jk}`
+                </td>
+                <td>
+
+                </td>
+                <td>
+                    (1)
+                </td>
+            </tr>
+            <tr title="flowbal: flow balance constraints">
+                <td>
+                    `\text{subject to}`
+                </td>
+                <td>
+                    `\sum_{k \in N:(j,k)\in A}x_{jk} - \sum_{i \in N:(i,j)\in A}x_{ij} = b_{j}`
+                </td>
+                <td>
+                    `\forall j \in N`
+                </td>
+                <td>
+                    (2)
+                </td>
+            </tr>
+            <tr title="flow variables">
+                <td></td>
+                <td>`x_{ij} >= 0`</td>
+                <td>`\forall (i,j)\in A`</td>
+                <td>(3)</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+{
+    "list": [
+        {
+            "label": "multi objective - definition",
+            "definition": "define the multiobjective model.",
+            "version": ""
+        },
+        {
+            "label": "multi objective - scalarization",
+            "definition": "enable scalarization such as weighted objective function or epsilon constraint scalarization with a choice on the primary objective. would be handy to compute the range of each objective function value.",
+            "version": ""
+        },
+        {
+            "label": "multi objective - efficient set",
+            "definition": "generate all nondominated solutions. Implement an algorithm using MathModel as its subprocedure (epsilon constraint scalarization) to generate all nondominated solutions.",
+            "version": ""
+        },
+        {
+            "label": "quadratic",
+            "definition": "define quadratic terms and models.",
+            "version": ""
+        },
+        {
+            "label": "quadratic - solvers",
+            "definition": "enable solving quadratic models.",
+            "version": ""
+        },
+        {
+            "label": "solver params",
+            "definition": "provide a complete mapping of already onboearded solvers' parameters",
+            "version": ""
+        },
+        {
+            "label": "onboard solver - Cbc",
+            "definition": "onboard solver - Cbc",
+            "version": ""
+        },
+        {
+            "label": "onboard solver - Gurobi",
+            "definition": "onboard solver - Gurobi",
+            "version": ""
+        },
+        {
+            "label": "onboard solver - HiGHS",
+            "definition": "onboard solver - HiGHS",
+            "version": ""
+        },
+        {
+            "label": "onboard solver - Xpress",
+            "definition": "onboard solver - Xpress",
+            "version": ""
+        },
+        {
+            "label": "onboard solver - GLPK",
+            "definition": "onboard solver - GLPK",
+            "version": ""
+        },
+        {
+            "label": "benchmark",
+            "definition": "benchmark model generation",
+            "version": ""
+        }
+    ]
+}

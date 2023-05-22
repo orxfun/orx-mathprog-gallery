@@ -1,0 +1,36 @@
+.about {
+    padding: 2em 5em;
+}
+
+.about .section {
+    padding-bottom: 5em;
+}
+
+.about .section:nth-child(2n+1) {
+    text-align: justify;
+    display: grid;
+    grid-template-columns: 1fr 10em;
+    column-gap: 5em;
+}
+
+.about .section:nth-child(2) {
+    text-align: right;
+    display: grid;
+    grid-template-columns: 10em 1fr;
+    column-gap: 5em;
+}
+
+.about h3 {
+    font-size: medium;
+    color: tomato;
+}
+
+.about img {
+    height: 10em;
+}
+
+.about .img-inline {
+    height: 1.6em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}

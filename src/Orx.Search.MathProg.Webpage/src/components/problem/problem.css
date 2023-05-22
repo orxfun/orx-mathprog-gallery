@@ -1,0 +1,42 @@
+.problem {
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.problem-page {
+    height: calc(100% - 100px);
+    padding: 1em 2em;
+}
+
+.problem-page-2 {
+    display: grid;
+    grid-template-rows: 7em auto;
+}
+
+.problem-page-2>div:nth-child(1) {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.problem a {
+    text-decoration: none;
+    color: tomato;
+}
+
+.problem-navi .navbar-brand {
+    margin-right: 3em;
+    color: tomato;
+}
+
+.problem-navi .navbar-nav {
+    column-gap: 0.5em;
+}
+
+.problem-navi button {
+    min-width: 2.75em;
+}
