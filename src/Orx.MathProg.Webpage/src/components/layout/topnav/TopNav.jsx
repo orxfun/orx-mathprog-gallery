@@ -25,13 +25,13 @@ export default function TopNav() {
             </div>
 
             <div>
-                <a href='https://github.com/orxfun/' target='blank'>
+                <a href='https://github.com/orxfun/orx-mathprog-gallery' target='blank'>
                     <img src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png' title='repository'></img>
                 </a>
             </div>
 
             <div>
-                <a href='https://www.nuget.org/packages/Orx.Fun.Option' target='blank'>
+                <a href='https://www.nuget.org/packages/Orx.MathProg' target='blank'>
                     <img src='https://www.nuget.org/Content/gallery/img/logo-header.svg' title='nuget package'></img>
                 </a>
             </div>
