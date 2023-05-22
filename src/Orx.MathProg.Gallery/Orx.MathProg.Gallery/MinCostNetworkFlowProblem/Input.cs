@@ -1,4 +1,4 @@
-﻿namespace Orx.Search.MathProg.Gallery.MinCostNetworkFlowProblem;
+﻿namespace Orx.MathProg.Gallery.MinCostNetworkFlowProblem;
 
 // input representation that is a generalization of
 // adjacency matrix or edges list

@@ -1,4 +1,4 @@
-﻿namespace Orx.Search.MathProg.Gallery.NetworkFlow.ShortestPathProblem;
+﻿namespace Orx.MathProg.Gallery.NetworkFlow.ShortestPathProblem;
 
 public class Model
 {

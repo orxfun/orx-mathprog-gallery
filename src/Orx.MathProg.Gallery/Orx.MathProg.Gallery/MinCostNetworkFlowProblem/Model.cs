@@ -1,4 +1,4 @@
-﻿namespace Orx.Search.MathProg.Gallery.MinCostNetworkFlowProblem;
+﻿namespace Orx.MathProg.Gallery.MinCostNetworkFlowProblem;
 
 public class Model
 {

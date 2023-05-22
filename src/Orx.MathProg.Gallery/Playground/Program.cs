@@ -1,5 +1,5 @@
-﻿using Orx.Search.MathProg;
-using static Orx.Search.MathProg.MathProgExtensions;
+﻿using Orx.MathProg;
+using static Orx.MathProg.MathProgExtensions;
 
 // input - draft
 int numNodes = 10;

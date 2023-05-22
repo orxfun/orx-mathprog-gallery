@@ -1,6 +1,6 @@
-﻿using Orx.Search.MathProg.Solvers;
+﻿using Orx.MathProg.Solvers;
 
-namespace Orx.Search.MathProg.Gallery.NetworkFlow.ShortestPathProblem;
+namespace Orx.MathProg.Gallery.NetworkFlow.ShortestPathProblem;
 
 public class Output
 {
