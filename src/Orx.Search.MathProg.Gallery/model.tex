@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\title{SPP}\begin{document}
+\maketitle
+
+\section{Sets}
+\begin{tabular}{ p{0.10\linewidth} p{0.55\linewidth} p{0.35\linewidth} }
+ $j$ &  & [0, 3] \\ 
+ $k\left(j\right)$ &  & j => heads[j] \\ 
+ $i\left(j\right)$ &  & j => tails[j] \\ 
+\end{tabular}
+
+
+\section{Parameters}
+\begin{tabular}{ p{0.10\linewidth} p{0.55\linewidth} p{0.35\linewidth} }
+ $w_{ij}$ & weight of arc (i,j) & weights \\ 
+ $b_{i}$ & node balance & 1 if i=s; -1 if i=t; 0 o/w \\ 
+\end{tabular}
+
+
+\section{Variables}
+\begin{tabular}{ p{0.10\linewidth} p{0.55\linewidth} p{0.35\linewidth} }
+ $x_{ij}$ & 1 if (i,j) is on the shortest path; 0 o/w & $\in \mathbb{R}^{+}$ \\ 
+\end{tabular}
+
+
+\section{Model}
+\begin{align}
+\min \qquad & \sum_{j}\sum_{k(j)}w_{jk}x_{jk} \label{MODELOBJECTIVE}  \\ 
+\text{s.t.} \qquad  & \sum_{k(j)}x_{jk} + \sum_{i(j)}-x_{ij} = b_{j} & \forall j \label{MODELCONSTRAINT0} 
+\end{align}
+\subsection{Objective}
+minimize dist
+
+
+minimize total path distance
+\subsection{Constraint: flowbal}
+
+
+flow balance constraints
+
+\end{document}

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orx.Search.MathProg.Gallery", "Orx.Search.MathProg.Gallery\Orx.Search.MathProg.Gallery.csproj", "{89EAD975-8F5A-4D92-B4B5-E33CE17B0159}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Playground", "Playground\Playground.csproj", "{9A0B6BA0-30D9-4E08-B144-2CC9AFBA314D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89EAD975-8F5A-4D92-B4B5-E33CE17B0159}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89EAD975-8F5A-4D92-B4B5-E33CE17B0159}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89EAD975-8F5A-4D92-B4B5-E33CE17B0159}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89EAD975-8F5A-4D92-B4B5-E33CE17B0159}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A0B6BA0-30D9-4E08-B144-2CC9AFBA314D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A0B6BA0-30D9-4E08-B144-2CC9AFBA314D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A0B6BA0-30D9-4E08-B144-2CC9AFBA314D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A0B6BA0-30D9-4E08-B144-2CC9AFBA314D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {15888829-E6BC-41A6-B88D-A39482F8AE8A}
+	EndGlobalSection
+EndGlobal
