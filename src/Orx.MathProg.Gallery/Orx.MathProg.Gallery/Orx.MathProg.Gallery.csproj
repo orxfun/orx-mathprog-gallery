@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Orx.Fun.Compose" Version="0.0.1" />
+    <PackageReference Include="Orx.Fun.FunVec" Version="1.0.0" />
+    <PackageReference Include="Orx.Fun.Option" Version="1.0.0" />
+    <PackageReference Include="Orx.Fun.Result" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Orx.MathProg">
+      <HintPath>..\..\..\..\orx-mathprog\src\Orx.MathProg\Orx.MathProg\bin\Debug\net6.0\Orx.MathProg.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
