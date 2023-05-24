@@ -19,8 +19,8 @@ export default function TopNav() {
             <div className='separator'></div>
 
             <div>
-                <a href='https://github.com/orxfun/' target='blank'>
-                    <img src='http://ewsoftware.github.io/XMLCommentsGuide/icons/Sandcastle.jpg' title='documentation'></img>
+                <a href='/sandcastle' target='blank'>
+                    <img src='http://ewsoftware.github.io/XMLCommentsGuide/icons/Sandcastle.jpg' title='sandcastle documentation'></img>
                 </a>
             </div>
 
