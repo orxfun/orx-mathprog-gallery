@@ -1,7 +1,7 @@
-import { Button } from 'react-bootstrap'
 import './topnav.css'
 
 export default function TopNav() {
+    const urlSandcastle = `${window.location.href}sandcastle`;
     return (
         <div className='topnav'>
             <code>
@@ -19,7 +19,7 @@ export default function TopNav() {
             <div className='separator'></div>
 
             <div>
-                <a href='/sandcastle' target='blank'>
+                <a href={urlSandcastle} target='blank'>
                     <img src='http://ewsoftware.github.io/XMLCommentsGuide/icons/Sandcastle.jpg' title='sandcastle documentation'></img>
                 </a>
             </div>
