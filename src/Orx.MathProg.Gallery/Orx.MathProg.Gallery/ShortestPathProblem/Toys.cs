@@ -1,4 +1,4 @@
-﻿namespace Orx.MathProg.Gallery.NetworkFlow.ShortestPathProblem;
+﻿namespace Orx.MathProg.Gallery.ShortestPathProblem;
 
 public static class Toys
 {
@@ -29,7 +29,7 @@ public static class Toys
 
         double inf = 10000;
         var model = GetModelAdjacencyMatrix();
-        
+
         var result = await model.Run(solver);
         if (result.IsNone || result.Unwrap().ShortestDistance >= inf)
             Console.WriteLine("Not reachable.");
@@ -41,7 +41,7 @@ public static class Toys
         }
         Console.WriteLine();
     }
-    
+
     public static Model GetModelEdgesList()
     {
         int n = 4;

@@ -1,4 +1,4 @@
-﻿namespace Orx.MathProg.Gallery.NetworkFlow.ShortestPathProblem;
+﻿namespace Orx.MathProg.Gallery.ShortestPathProblem;
 
 // input representation that is a generalization of
 // adjacency matrix or edges list

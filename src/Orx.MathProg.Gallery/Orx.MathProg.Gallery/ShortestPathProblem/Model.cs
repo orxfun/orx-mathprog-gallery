@@ -1,4 +1,4 @@
-﻿namespace Orx.MathProg.Gallery.NetworkFlow.ShortestPathProblem;
+﻿namespace Orx.MathProg.Gallery.ShortestPathProblem;
 
 public class Model
 {
@@ -40,7 +40,7 @@ public class Model
         Objective minDist = key("dist") | "minimize total path distance"
             | minimize
             | sum(over(j, k), w[j, k] * x[j, k]);
-        
+
         MathModel = MathModel.New("SPP")
             .WithObjective(minDist)
             .HasConstraints(flowBalance);
