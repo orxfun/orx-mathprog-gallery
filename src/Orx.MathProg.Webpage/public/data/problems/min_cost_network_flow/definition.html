@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script async="true" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"> </script>
+    <style>
+        body {
+            font-family: 'Lucida', monospace;
+            font-size: larger;
+            padding: 3em 15%;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            background-color: gray;
+            margin-top: 2em;
+            padding: 0.5em 1.0em;
+            border-radius: 0.2em;
+            font-size: 1.5em;
+            font-weight: normal;
+        }
+
+        .orx-mathmodel-symbols {
+            padding: 0 2em;
+            display: grid;
+            grid-template-columns: 5em auto auto;
+            column-gap: 1em;
+            row-gap: 1em;
+        }
+
+        .orx-mathmodel-symbols>.title {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            margin-top: 1.0em;
+            border-bottom: 0.1em solid lightgray;
+        }
+
+        .orx-mathmodel-symbol>div {
+            display: flex;
+            align-items: center;
+        }
+
+        .orx-mathmodel {
+            width: 100%;
+            padding: 0 2em;
+        }
+
+        .orx-mathmodel tr {
+            height: 4em;
+        }
+
+        .orx-mathmodel td {
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+
+        .orx-mathmodel tr td:nth-child(1) {
+            text-align: right;
+        }
+
+        .orx-mathmodel-explanations {
+            padding-top: 2em;
+        }
+
+        .orx-mathmodel-explanations ol {
+            list-style-type: none;
+        }
+
+        .orx-mathmodel-explanations li {
+            counter-increment: section;
+        }
+
+        .orx-mathmodel-explanations li::before {
+            content: "(" counter(section) ") ";
+        }
+
+        .orx-mathmodel-explanations strong {
+            font-weight: normal;
+            color: darkred;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Minimum Cost Network Flow Problem</h1>
+
+    <p>
+        <a href="https://en.wikipedia.org/wiki/Minimum-cost_flow_problem">Wikipedia</a>
+    </p>
+    <p>
+        The minimum-cost flow problem (MCFP) is an optimization and decision problem to find the cheapest possible way
+        of sending a certain amount of flow through a flow network. A typical application of this problem involves
+        finding the best delivery route from a factory to a warehouse where the road network has some capacity and cost
+        associated. The minimum cost flow problem is one of the most fundamental among all flow and circulation problems
+        because most other such problems can be cast as a minimum cost flow problem and also that it can be solved
+        efficiently using the network simplex algorithm.
+    </p>
+    <h2>Mathematical Formulation</h2>
+    Let `N` be set of nodes and `(i,j) \in A` be an arc of the graph `G = (N, A)` with weight `w_{ij}`.
+    Further, let `b_i` be the demand if `i` is the source (starting) node; -demand if it is the sink (ending) node; and
+    0 otherwise.
+    Finally, let `\text{cap}_{ij}` be the capacity of edge (i,j).
+    The optimal solution to the following program provides the minimum cost network flow for the demand from its
+    esignated source to the sink.
+
+    <table class="orx-mathmodel">
+        <tbody>
+            <tr title="dist: minimize total path distance">
+                <td>
+                    `\min`
+                </td>
+                <td>
+                    `\sum_{j\in N} \text{ } \sum_{k \in N:(j,k)\in A} w_{jk} \times x_{jk}`
+                </td>
+                <td>
+
+                </td>
+                <td>
+                    (1)
+                </td>
+            </tr>
+            <tr title="flowbal: flow balance constraints">
+                <td>
+                    `\text{subject to}`
+                </td>
+                <td>
+                    `\sum_{k \in N:(j,k)\in A}x_{jk} - \sum_{i \in N:(i,j)\in A}x_{ij} = b_{j}`
+                </td>
+                <td>
+                    `\forall j \in N`
+                </td>
+                <td>
+                    (2)
+                </td>
+            </tr>
+            <tr title="flow variables">
+                <td></td>
+                <td>`0 &lt;= x_{ij} &lt;= \text{cap}_{ij}`</td>
+                <td>`\forall (i,j)\in A`</td>
+                <td>(3)</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
