@@ -2,13 +2,13 @@
 
 public class Model
 {
-    readonly Input input;
+    readonly Input Input;
     readonly VarD2 x;
     public readonly MathModel MathModel;
 
     public Model(Input input)
     {
-        this.input = input;
+        Input = input;
         var (n, tails, heads, weights, s, t) = input;
         double getB(int nodeIndex)
         {
@@ -50,6 +50,6 @@ public class Model
         var result = await solver.Solve(MathModel);
         var solution = result.Unwrap();
         return SomeIf(solution.IsFeasible,
-            () => new Output(solution, x, input.Source, input.Sink));
+            () => new Output(solution, x, Input.Source, Input.Sink));
     }
 }

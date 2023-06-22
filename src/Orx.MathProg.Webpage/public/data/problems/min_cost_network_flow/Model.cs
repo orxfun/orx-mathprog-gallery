@@ -2,14 +2,12 @@
 
 public class Model
 {
-    readonly Input input;
     readonly VarD2 x;
     public readonly MathModel MathModel;
 
     public Model(Input input)
     {
         // init
-        this.input = input;
         var (n, tails, heads, weights, edgeCapacities, demand, s, t) = input;
         double getB(int nodeIndex)
         {

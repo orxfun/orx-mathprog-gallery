@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -11,12 +11,13 @@
     <PackageReference Include="Orx.Fun.FunVec" Version="1.0.0" />
     <PackageReference Include="Orx.Fun.Option" Version="1.0.0" />
     <PackageReference Include="Orx.Fun.Result" Version="1.0.1" />
+	<PackageReference Include="Orx.MathProg" Version="1.0.3" />
   </ItemGroup>
 
-  <ItemGroup>
+  <!--<ItemGroup>
     <Reference Include="Orx.MathProg">
       <HintPath>..\..\..\..\orx-mathprog\src\Orx.MathProg\Orx.MathProg\bin\Debug\net6.0\Orx.MathProg.dll</HintPath>
     </Reference>
-  </ItemGroup>
+  </ItemGroup>-->
 
 </Project>

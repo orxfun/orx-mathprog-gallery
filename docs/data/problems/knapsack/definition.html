@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script async="true" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"> </script>
+    <style>
+        body {
+            font-family: 'Lucida', monospace;
+            padding: 3em 15%;
+            text-align: justify;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            background-color: #408000;
+            border: 1px solid #336600;
+            margin-top: 2em;
+            padding: 0.5em 1.0em;
+            border-radius: 0.2em;
+            font-size: 1.5em;
+            font-weight: normal;
+        }
+
+        .orx-mathmodel-symbols {
+            padding: 0 2em;
+            display: grid;
+            grid-template-columns: 5em auto auto;
+            column-gap: 1em;
+            row-gap: 1em;
+        }
+
+        .orx-mathmodel-symbols>.title {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            margin-top: 1.0em;
+            border-bottom: 0.1em solid lightgray;
+        }
+
+        .orx-mathmodel-symbol>div {
+            display: flex;
+            align-items: center;
+        }
+
+        .orx-mathmodel {
+            width: 100%;
+            padding: 0 2em;
+        }
+
+        .orx-mathmodel tr {
+            height: 4em;
+        }
+
+        .orx-mathmodel td {
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+
+        .orx-mathmodel tr td:nth-child(1) {
+            text-align: right;
+        }
+
+        .orx-mathmodel-explanations {
+            padding-top: 2em;
+        }
+
+        .orx-mathmodel-explanations ol {
+            list-style-type: none;
+        }
+
+        .orx-mathmodel-explanations li {
+            counter-increment: section;
+        }
+
+        .orx-mathmodel-explanations li::before {
+            content: "(" counter(section) ") ";
+        }
+
+        .orx-mathmodel-explanations strong {
+            font-weight: normal;
+            color: darkred;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Knapsack Problem</h1>
+
+    <p>
+        <a href="https://en.wikipedia.org/wiki/Knapsack_problem">Wikipedia</a>
+    </p>
+    <p>
+        Given a set of items, each with a weight and a value, determine which items to include in the collection so that
+        the total weight is less than or equal to a given limit and the total value is as large as possible.
+    </p>
+    <p>
+        The knapsack problem has been studied for more than a century, with early works dating as far back as 1897.
+    </p>
+    <p>
+        Knapsack problems appear in real-world decision-making processes in a wide variety of fields, such as finding
+        the least wasteful way to cut raw materials,[2] selection of investments and portfolios,[3] selection of assets
+        for asset-backed securitization,[4] and generating keys for the Merkle-Hellman[5] and other knapsack
+        cryptosystems.
+    </p>
+
+    <h2>Mathematical Formulation</h2>
+    <p>
+        Let `I` be set of available items.
+        For each item `i \in I`, let `v_i` be the value of placing item i to the knapsack and `w_i` be the corresponding
+        weight.
+        Finally, let `C` be the total capacity of the knapsack in terms of weight.
+    </p>
+
+    <table class="orx-mathmodel">
+        <tbody>
+            <tr title="knapsack-value: maximize value of the knapsack">
+                <td>
+                    `\max`
+                </td>
+                <td>
+                    `\sum_{i\in I} \text{ } v_{i} \times x_{i}`
+                </td>
+                <td>
+
+                </td>
+                <td>
+                    (1)
+                </td>
+            </tr>
+            <tr title="knapsack-capacity: knapsack capacity constraint">
+                <td>
+                    `\text{subject to}`
+                </td>
+                <td>
+                    `\sum_{i \in I}w_i \times x_{i} &lt;= C`
+                </td>
+                <td>
+
+                </td>
+                <td>
+                    (2)
+                </td>
+            </tr>
+            <tr title="packing variables">
+                <td></td>
+                <td>`x_{i} \in \{0, 1\}`</td>
+                <td>`\forall i\in I`</td>
+                <td>(3)</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

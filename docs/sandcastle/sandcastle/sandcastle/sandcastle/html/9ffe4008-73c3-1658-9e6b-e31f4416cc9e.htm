@@ -1,0 +1,434 @@
+﻿<!DOCTYPE html ><html lang="en-US"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" href="../css/bulma.css" /><link rel="stylesheet" href="../css/font-awesome.min.css" /><link rel="stylesheet" href="../css/presentationStyle.css" /><link rel="stylesheet" href="../css/vs.min.css" /><script src="../scripts/jquery-3.5.1.min.js"></script><script src="../scripts/clipboard.min.js"></script><script src="../scripts/highlight.min.js"></script><script src="../scripts/presentationStyle.js"></script><title>MathProgExtensions Methods</title><meta name="Title" content="Methods" /><meta name="Help.Id" content="Methods.T:Orx.MathProg.MathProgExtensions" /><meta name="Help.ContentType" content="Reference" /><meta name="container" content="Orx.MathProg" /><meta name="guid" content="9ffe4008-73c3-1658-9e6b-e31f4416cc9e" /><meta name="tocFile" content="../toc/IDVA.xml" /></head><body><div class="fixedLayout"><div id="Header" class="fixedHeader"><div class="pageHeader level mb-0 py-2 px-4"><div id="TitleContainer" class="level-left"><div id="DocumentationTitle" class="level-item">Orx.MathProg (C#)</div></div><div id="LangFilterSearchContainer" class="level-right"><div class="level-item"><div class="dropdown is-hoverable"><div class="dropdown-trigger"><button class="button" aria-haspopup="true" aria-controls="dropdown-menu"><span id="CurrentLanguage"></span><span class="icon is-small"><i class="fa fa-angle-down" aria-hidden="true"></i></span></button></div><div class="dropdown-menu" role="menu"><div id="LanguageSelections" class="dropdown-content"><a class="dropdown-item languageFilterItem" data-languageId="cs">C#</a></div></div></div></div><div class="level-item"><form id="SearchForm" action="#" onsubmit="TransferToSearchPage(); return false;"><div class="field"><div class="control has-icons-left"><input id="SearchTerms" class="input" type="text" maxlength="200" placeholder="Search" /><span class="icon is-small is-left"><i class="fa fa-search"></i></span><button id="SearchButton" type="submit" class="is-hidden"></button></div></div></form></div></div></div></div><div class="fixedContent"><nav class="breadcrumb my-1 px-2 border-bottom" role="navigation"><ul id="TopicBreadcrumbs" /></nav><div class="columns pl-5 pr-5 fixedContent"><div id="ShowHideTOCColumn" class="column is-hidden-tablet"><a id="ShowHideTOC">Show/Hide TOC</a></div><div id="TOCColumn" class="column is-hidden-mobile"><nav class="toc"><ul id="TableOfContents" class="toc-menu" /></nav></div><div id="TopicContent" class="column content is-7"><h1>Math<wbr />Prog<wbr />Extensions Methods</h1><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>Methods</h2><div id="IDCDASection"><table id="MethodList" class="table is-hoverable"><tr><td><a href="b0060795-9ca9-5136-6174-a4047bd7bc34.htm">forall(Set)</a></td><td>
+            Creates a forall sets expression for a constraint.
+            
+            <div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs">Constraint conDesign = forall(i) | sum(over(j), x[i, j]) &lt;= M * y[i];</code></pre></div></div></td></tr><tr><td><a href="089b11ff-830e-4f35-2aa9-37cd6032eebe.htm">forall(Set, Set)</a></td><td>
+            Creates a forall sets expression for a constraint.
+            
+            <div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs">Constraint conDesign = forall(i, j) | x[i, j] &lt;= M * y[i, j];</code></pre></div></div></td></tr><tr><td><a href="23784a40-7059-b3bf-c6da-82dcb836c682.htm">forall(Set, Set, Set)</a></td><td>
+            Creates a forall sets expression for a constraint.
+            
+            <div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs">Constraint conDesign = forall(i, j, k) | x[i, j, k] &lt;= M * y[i, j];</code></pre></div></div></td></tr><tr><td><a href="56a7e393-dbb8-53f6-8b90-bd25adb3d82f.htm">forall(Set, Set, Set, Set)</a></td><td>
+            Creates a forall sets expression for a constraint.
+            
+            <div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs">Constraint conDesign = forall(i, j, k, l) | x[i, j, k] &lt;= M * y[i, j] + b[l];</code></pre></div></div></td></tr><tr><td><a href="143a40b4-2835-2bbc-f6a0-34fd4408acb3.htm">HasElements(SetBuilderDepends<span id="LST42AEBFAA_0" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension1<span id="LST42AEBFAA_1" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, Func<span id="LST42AEBFAA_2" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Int32, IEnumerable<span id="LST42AEBFAA_3" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Int32<span id="LST42AEBFAA_4" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span><span id="LST42AEBFAA_5" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, String)</a></td><td>
+            Finalizes the set builder and returns the resulting set.
+            
+            <p>
+            The set generates elements in [0, <span class="parameter">getIndicesByDependsSet</span>(i));
+            where i is the value of the dependent set.
+            </p><p>
+            Consider the following example.
+            </p><div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs">int numNodes = 4;
+List&lt;(int, int)&gt; edges = new()
+{
+    (0, 1),
+    (0, 2),
+    (1, 2),
+    (1, 3),
+    (2, 3),
+};
+IEnumerable&lt;int&gt; getHeads(int i)
+    =&gt; edges.Where(e =&gt; e.Item1 == i).Select(x =&gt; x.Item2);
+
+Set i = Set("i").Represents("nodes").HasElementsUntil(numNodes);
+Set j = Set("j").Represents("nodes having an arc from node i").DependsOn(i).HasElements(getHeads);</code></pre></div></div><p>
+            Here, set i has indices { 0, 1, 2, 3 }.
+            </p><p>
+            Set j, on the other hand, depends on set i.
+            In other words, it will generate different elements for different values of i:
+            </p><ul><li>when i takes value 0; j has elements { 1, 2 },</li><li>when i takes value 1; j has elements { 2, 3 },</li><li>when i takes value 2; j has elements { 3 }, and</li><li>when i takes value 3; j is empty set.</li></ul></td></tr><tr><td><a href="b8fc4c48-0847-6574-368c-719d350a4058.htm">HasElements(SetBuilderDepends<span id="LST42AEBFAA_6" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension2<span id="LST42AEBFAA_7" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, Func<span id="LST42AEBFAA_8" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Int32, Int32, IEnumerable<span id="LST42AEBFAA_9" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Int32<span id="LST42AEBFAA_10" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span><span id="LST42AEBFAA_11" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, String)</a></td><td>
+            Finalizes the set builder and returns the resulting set.
+            
+            <p>
+            The set generates elements in [0, <span class="parameter">getIndicesByDependsSets</span>(i, j));
+            where i and j are the values of the dependent sets.
+            </p><p>
+            Consider the following example.
+            </p><div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs">int numNodes = 4;
+List&lt;(int, int)&gt; edges = new()
+{
+    (0, 1),
+    (0, 2),
+    (1, 2),
+    (1, 3),
+    (2, 3),
+};
+IEnumerable&lt;int&gt; getHeads(int i)
+    =&gt; edges.Where(e =&gt; e.Item1 == i).Select(x =&gt; x.Item2);
+
+Set i = Set("i").Represents("nodes").HasElementsUntil(numNodes);
+Set j = Set("j").Represents("nodes having an arc from node i").DependsOn(i).HasElements(getHeads);</code></pre></div></div><p>
+            Here, set i has indices { 0, 1, 2, 3 }.
+            </p><p>
+            Set j, on the other hand, depends on set i.
+            In other words, it will generate different elements for different values of i:
+            </p><ul><li>when i takes value 0; j has elements { 1, 2 },</li><li>when i takes value 1; j has elements { 2, 3 },</li><li>when i takes value 2; j has elements { 3 }, and</li><li>when i takes value 3; j is empty set.</li></ul></td></tr><tr><td><a href="6cecb84f-59a4-73a7-f4a4-b25f7646280d.htm">HasElementsUntil</a></td><td>
+            Finalizes the set builder and returns the resulting set.
+            
+            <p>
+            The set generates elements in [0, <span class="parameter">getUntil</span>(i));
+            where i is the value of the dependent set.
+            </p><p>
+            For instance, consider the following sets.
+            </p><div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs">Set t2 = Set("t2").Represents("time periods").HasElementsUntil(4);
+Set t1 = Set("t1").Represents("time periods until t2").DependsOn(t2).HasElementsUntil(t1 =&gt; t1 + 1);</code></pre></div></div><p>
+            Set t2 has elements { 0, 1, 2, 3 }.
+            </p><p>
+            Set t1 depends on t2; hence, generates different indices for different values of t2:
+            </p><ul><li>when t1 = 0; t2 has elements { 0 },</li><li>when t1 = 1; t2 has elements { 0, 1 },</li><li>when t1 = 2; t2 has elements { 0, 1, 2 },</li><li>when t1 = 3; t2 has elements { 0, 1, 2, 3 }.</li></ul></td></tr><tr><td><a href="0c35b206-6fef-42c8-fbf8-0ea0b10973c2.htm">HasSameElementsExceptParent</a></td><td>
+            Finalizes the set builder and returns the resulting set.
+            
+            <p>
+            The set generates exactly the elements of the dependent set except for its value.
+            </p><p>
+            For instance, consider the following sets.
+            </p><div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs">Set i = Set("i").Represents("node").HasElementsUntil(3);
+Set j = Set("j").Represents("node except for i").DependsOn(i).HasSameElementsExceptParent();</code></pre></div></div><p>
+            Set i has elements { 0, 1, 2 }.
+            </p><p>
+            Set j depends on set i; hence, has different elements for different values of i:
+            </p><ul><li>when i=0; j has elements { 1, 2 },</li><li>when i=1; j has elements { 0, 2 },</li><li>when i=2; j has elements { 0, 1 }.</li></ul></td></tr><tr><td><a href="495e0b35-c958-2d47-2b55-3d834585cea8.htm">HasValue(ParameterBuilderIndices<span id="LST42AEBFAA_12" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension0<span id="LST42AEBFAA_13" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, Double, String)</a></td><td>
+    
+            Finalizes the parameter builder and returns the resulting 0-dimensional parameter <a href="af89ed43-38d2-dd63-2b1a-f97cd6741206.htm">ParD0</a>.
+            
+            <p>
+            The resulting parameter has the given value.
+            </p></td></tr><tr><td><a href="85b083e6-2138-633e-de51-4163dd9a2543.htm">HasValue(ParameterBuilderIndices<span id="LST42AEBFAA_14" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension0<span id="LST42AEBFAA_15" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, Func<span id="LST42AEBFAA_16" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Double<span id="LST42AEBFAA_17" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, String)</a></td><td>
+    
+            Finalizes the parameter builder and returns the resulting 0-dimensional parameter <a href="af89ed43-38d2-dd63-2b1a-f97cd6741206.htm">ParD0</a>.
+            
+            <p>
+            Value of the resulting parameter will be obtained by the given function.
+            </p></td></tr><tr><td><a href="5ca02782-8fe1-25a9-9a2a-82d791f32159.htm">HasValues(ParameterBuilderIndices<span id="LST42AEBFAA_18" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension1<span id="LST42AEBFAA_19" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, FunVec1<span id="LST42AEBFAA_20" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Double<span id="LST42AEBFAA_21" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, String)</a></td><td>
+            Finalizes the parameter builder and returns the resulting 1-dimensional parameter <a href="e4348208-fd7f-b6a1-98bd-c33521647646.htm">ParD1</a>.
+            
+            <p>
+            The resulting parameter has values defined by the given 1-dimensional functional vector.
+            </p></td></tr><tr><td><a href="a7bbf4b4-bfeb-8ea6-aaf8-b6f6c065678a.htm">HasValues(ParameterBuilderIndices<span id="LST42AEBFAA_22" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension2<span id="LST42AEBFAA_23" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, FunVec2<span id="LST42AEBFAA_24" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Double<span id="LST42AEBFAA_25" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, String)</a></td><td>
+            Finalizes the parameter builder and returns the resulting 2-dimensional parameter <a href="6915174e-9e72-a17c-24b5-b175f52d09f1.htm">ParD2</a>.
+            
+            <p>
+            The resulting parameter has values defined by the given 2-dimensional functional vector.
+            </p></td></tr><tr><td><a href="a4743db0-a51a-37fe-51f4-164af3bca0d3.htm">HasValues(ParameterBuilderIndices<span id="LST42AEBFAA_26" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension3<span id="LST42AEBFAA_27" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, FunVec3<span id="LST42AEBFAA_28" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Double<span id="LST42AEBFAA_29" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, String)</a></td><td>
+            Finalizes the parameter builder and returns the resulting 3-dimensional parameter <a href="4993377b-9479-9dea-bebc-cd0a1c09fbc0.htm">ParD3</a>.
+            
+            <p>
+            The resulting parameter has values defined by the given 3-dimensional functional vector.
+            </p></td></tr><tr><td><a href="6ea0e5d5-e1d1-6157-08b6-dcb607c5e0e0.htm">HasValues(ParameterBuilderIndices<span id="LST42AEBFAA_30" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension4<span id="LST42AEBFAA_31" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, FunVec4<span id="LST42AEBFAA_32" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Double<span id="LST42AEBFAA_33" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, String)</a></td><td>
+            Finalizes the parameter builder and returns the resulting 4-dimensional parameter <a href="0e70fb3e-4475-eeaf-b176-3929719f4459.htm">ParD4</a>.
+            
+            <p>
+            The resulting parameter has values defined by the given 4-dimensional functional vector.
+            </p></td></tr><tr><td><a href="ca7d24be-cb5d-78c7-3335-4d90eb1db574.htm">IsBetweenZeroAndOne(VariableBuilderType<span id="LST42AEBFAA_34" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension0<span id="LST42AEBFAA_35" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 0-dimensional variable <a href="16abb95a-df22-05c0-304a-cc86c1ccd98c.htm">VarD0</a>.
+            <p>
+            The resulting variable is unboundd; i.e., in [0, 1].
+            </p></td></tr><tr><td><a href="1fb2d4c7-4496-ae9c-0ff1-47ed460fe482.htm">IsBetweenZeroAndOne(VariableBuilderType<span id="LST42AEBFAA_36" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension1<span id="LST42AEBFAA_37" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 1-dimensional variable <a href="33bb4b03-8e33-08aa-930d-5328c6b7b7c1.htm">VarD1</a>.
+            <p>
+            The resulting variable is unboundd; i.e., in [0, 1].
+            </p></td></tr><tr><td><a href="88748244-52c8-e3f7-b4ae-16a9e628af15.htm">IsBetweenZeroAndOne(VariableBuilderType<span id="LST42AEBFAA_38" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension2<span id="LST42AEBFAA_39" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 2-dimensional variable <a href="e5855b03-aa28-38d9-75eb-04f403331b7a.htm">VarD2</a>.
+            <p>
+            The resulting variable is unboundd; i.e., in [0, 1].
+            </p></td></tr><tr><td><a href="2b736a57-387c-3642-153e-fad3752cbc63.htm">IsBetweenZeroAndOne(VariableBuilderType<span id="LST42AEBFAA_40" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension3<span id="LST42AEBFAA_41" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 3-dimensional variable <a href="7c186f1b-554a-45d7-3a0e-e31ac57dd66e.htm">VarD3</a>.
+            <p>
+            The resulting variable is unboundd; i.e., in [0, 1].
+            </p></td></tr><tr><td><a href="e2b0b6e4-9a39-8af9-bc29-c4eca17daf36.htm">IsBetweenZeroAndOne(VariableBuilderType<span id="LST42AEBFAA_42" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension4<span id="LST42AEBFAA_43" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 4-dimensional variable <a href="61c87635-6fa7-0ca4-324a-ccaa2c13aa0b.htm">VarD4</a>.
+            <p>
+            The resulting variable is unboundd; i.e., in [0, 1].
+            </p></td></tr><tr><td><a href="e6e6450b-4803-936b-0e7e-d873ebf1f5e7.htm">IsBinary(VariableBuilderIndices<span id="LST42AEBFAA_44" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension0<span id="LST42AEBFAA_45" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 0-dimensional variable <a href="16abb95a-df22-05c0-304a-cc86c1ccd98c.htm">VarD0</a>.
+            <p>
+            The resulting variable is binary (0/1) which can take either value 0 or 1.
+            </p></td></tr><tr><td><a href="35fca602-a94a-a036-90de-abf2501d84fb.htm">IsBinary(VariableBuilderIndices<span id="LST42AEBFAA_46" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension1<span id="LST42AEBFAA_47" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 1-dimensional variable <a href="33bb4b03-8e33-08aa-930d-5328c6b7b7c1.htm">VarD1</a>.
+            <p>
+            The resulting variable is binary (0/1) which can take either value 0 or 1.
+            </p></td></tr><tr><td><a href="9e09b746-80d3-b574-9b52-2ab952622fb8.htm">IsBinary(VariableBuilderIndices<span id="LST42AEBFAA_48" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension2<span id="LST42AEBFAA_49" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 2-dimensional variable <a href="e5855b03-aa28-38d9-75eb-04f403331b7a.htm">VarD2</a>.
+            <p>
+            The resulting variable is binary (0/1) which can take either value 0 or 1.
+            </p></td></tr><tr><td><a href="5468fd3f-3889-126f-9619-0ed117a84b8e.htm">IsBinary(VariableBuilderIndices<span id="LST42AEBFAA_50" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension3<span id="LST42AEBFAA_51" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 3-dimensional variable <a href="7c186f1b-554a-45d7-3a0e-e31ac57dd66e.htm">VarD3</a>.
+            <p>
+            The resulting variable is binary (0/1) which can take either value 0 or 1.
+            </p></td></tr><tr><td><a href="ec965fb7-a829-26ab-9669-c38bbcebc7b1.htm">IsBinary(VariableBuilderIndices<span id="LST42AEBFAA_52" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension4<span id="LST42AEBFAA_53" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 4-dimensional variable <a href="61c87635-6fa7-0ca4-324a-ccaa2c13aa0b.htm">VarD4</a>.
+            <p>
+            The resulting variable is binary (0/1) which can take either value 0 or 1.
+            </p></td></tr><tr><td><a href="37928c17-3de5-2a18-c502-30a6b435a283.htm">IsNonnegative(VariableBuilderType<span id="LST42AEBFAA_54" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension0<span id="LST42AEBFAA_55" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 0-dimensional variable <a href="16abb95a-df22-05c0-304a-cc86c1ccd98c.htm">VarD0</a>.
+            <p>
+            The resulting variable is nonnegative; i.e., in [0, infinity).
+            </p></td></tr><tr><td><a href="8d604ddc-72f7-aa83-9c68-c15938fbd1a8.htm">IsNonnegative(VariableBuilderType<span id="LST42AEBFAA_56" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension1<span id="LST42AEBFAA_57" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 1-dimensional variable <a href="33bb4b03-8e33-08aa-930d-5328c6b7b7c1.htm">VarD1</a>.
+            <p>
+            The resulting variable is nonnegative; i.e., in [0, infinity).
+            </p></td></tr><tr><td><a href="70ec514a-4436-b03c-79c1-14a15f4ce36d.htm">IsNonnegative(VariableBuilderType<span id="LST42AEBFAA_58" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension2<span id="LST42AEBFAA_59" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 2-dimensional variable <a href="e5855b03-aa28-38d9-75eb-04f403331b7a.htm">VarD2</a>.
+            <p>
+            The resulting variable is nonnegative; i.e., in [0, infinity).
+            </p></td></tr><tr><td><a href="63ff337e-0a8f-c737-de1e-e237a2b8774b.htm">IsNonnegative(VariableBuilderType<span id="LST42AEBFAA_60" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension3<span id="LST42AEBFAA_61" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 3-dimensional variable <a href="7c186f1b-554a-45d7-3a0e-e31ac57dd66e.htm">VarD3</a>.
+            <p>
+            The resulting variable is nonnegative; i.e., in [0, infinity).
+            </p></td></tr><tr><td><a href="899f938a-9e2e-3b44-e0be-4e02b03a37a5.htm">IsNonnegative(VariableBuilderType<span id="LST42AEBFAA_62" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension4<span id="LST42AEBFAA_63" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 4-dimensional variable <a href="61c87635-6fa7-0ca4-324a-ccaa2c13aa0b.htm">VarD4</a>.
+            <p>
+            The resulting variable is nonnegative; i.e., in [0, infinity).
+            </p></td></tr><tr><td><a href="cca99b22-b832-9cdd-1282-24f0047a4e7d.htm">IsNonpositive(VariableBuilderType<span id="LST42AEBFAA_64" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension0<span id="LST42AEBFAA_65" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 0-dimensional variable <a href="16abb95a-df22-05c0-304a-cc86c1ccd98c.htm">VarD0</a>.
+            <p>
+            The resulting variable is nonpositive; i.e., in (-infinity, 0].
+            </p></td></tr><tr><td><a href="5b0e5a30-2f93-fb95-1450-3f044ac2e2f5.htm">IsNonpositive(VariableBuilderType<span id="LST42AEBFAA_66" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension1<span id="LST42AEBFAA_67" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 1-dimensional variable <a href="33bb4b03-8e33-08aa-930d-5328c6b7b7c1.htm">VarD1</a>.
+            <p>
+            The resulting variable is nonpositive; i.e., in (-infinity, 0].
+            </p></td></tr><tr><td><a href="15e1d461-8c74-7e83-92ce-42117e986207.htm">IsNonpositive(VariableBuilderType<span id="LST42AEBFAA_68" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension2<span id="LST42AEBFAA_69" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 2-dimensional variable <a href="e5855b03-aa28-38d9-75eb-04f403331b7a.htm">VarD2</a>.
+            <p>
+            The resulting variable is nonpositive; i.e., in (-infinity, 0].
+            </p></td></tr><tr><td><a href="ed612022-a21c-8b9f-e218-60963846e3db.htm">IsNonpositive(VariableBuilderType<span id="LST42AEBFAA_70" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension3<span id="LST42AEBFAA_71" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 3-dimensional variable <a href="7c186f1b-554a-45d7-3a0e-e31ac57dd66e.htm">VarD3</a>.
+            <p>
+            The resulting variable is nonpositive; i.e., in (-infinity, 0].
+            </p></td></tr><tr><td><a href="20fc104d-e539-883e-5029-324904115d2a.htm">IsNonpositive(VariableBuilderType<span id="LST42AEBFAA_72" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension4<span id="LST42AEBFAA_73" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 4-dimensional variable <a href="61c87635-6fa7-0ca4-324a-ccaa2c13aa0b.htm">VarD4</a>.
+            <p>
+            The resulting variable is nonpositive; i.e., in (-infinity, 0].
+            </p></td></tr><tr><td><a href="e7f22c2b-34af-b2d1-988c-364396fd7858.htm">IsUnbounded(VariableBuilderType<span id="LST42AEBFAA_74" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension0<span id="LST42AEBFAA_75" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 0-dimensional variable <a href="16abb95a-df22-05c0-304a-cc86c1ccd98c.htm">VarD0</a>.
+            <p>
+            The resulting variable is unboundd; i.e., in (-infinity, infinity).
+            </p></td></tr><tr><td><a href="57f61108-218a-ba19-7dd2-d66dafd3d9e6.htm">IsUnbounded(VariableBuilderType<span id="LST42AEBFAA_76" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension1<span id="LST42AEBFAA_77" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 1-dimensional variable <a href="33bb4b03-8e33-08aa-930d-5328c6b7b7c1.htm">VarD1</a>.
+            <p>
+            The resulting variable is unboundd; i.e., in (-infinity, infinity).
+            </p></td></tr><tr><td><a href="2f812d27-e21c-d831-a083-df2a22442def.htm">IsUnbounded(VariableBuilderType<span id="LST42AEBFAA_78" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension2<span id="LST42AEBFAA_79" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 2-dimensional variable <a href="e5855b03-aa28-38d9-75eb-04f403331b7a.htm">VarD2</a>.
+            <p>
+            The resulting variable is unboundd; i.e., in (-infinity, infinity).
+            </p></td></tr><tr><td><a href="d80dafae-00a0-d383-3f87-658fa422e423.htm">IsUnbounded(VariableBuilderType<span id="LST42AEBFAA_80" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension3<span id="LST42AEBFAA_81" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 3-dimensional variable <a href="7c186f1b-554a-45d7-3a0e-e31ac57dd66e.htm">VarD3</a>.
+            <p>
+            The resulting variable is unboundd; i.e., in (-infinity, infinity).
+            </p></td></tr><tr><td><a href="e3c8828c-4a99-0a20-e91a-278f93912982.htm">IsUnbounded(VariableBuilderType<span id="LST42AEBFAA_82" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension4<span id="LST42AEBFAA_83" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 4-dimensional variable <a href="61c87635-6fa7-0ca4-324a-ccaa2c13aa0b.htm">VarD4</a>.
+            <p>
+            The resulting variable is unboundd; i.e., in (-infinity, infinity).
+            </p></td></tr><tr><td><a href="21e8814a-6b13-8d5c-2d7f-b1d2e17f8b73.htm">key</a></td><td>
+            Creates a symbol key for an objective function or a constraint.
+            
+            <p>
+            See below three ways to create a flow balance constraint with different levels of details.
+            </p><div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs">Set j = Set("j").Represents("Nodes of the network.").HasElementsUntil(data.NumNodes);
+Set i = Set("i").Represents("Tails of edges incoming to j").DependsOn(j).HasElements(data.TailsOf);
+Set k = Set("k").Represents("Heads of edges outgoing from j").DependsOn(j).HasElements(data.HeadsOf);
+ParD1 demand = Parameter("dem").Represents("Node demand; i.e., amount of flow that needs to be transported to each node.")
+    .HasIndices(i).HasValues(data.NodeDemand);
+
+// no details
+Constraint flowBalance =
+    forall(j)
+    | sum(over(i), x[i, j]) - sum(over(k), x[j, k]) == demand[j];
+
+// only with constraint key; this enables matching the constraint in the lp files;
+// also makes automatically generated LaTeX, html or text documentation easier to read.
+Constraint flowBalance =
+    key("flowbal")
+    | forall(j)
+    | sum(over(i), x[i, j]) - sum(over(k), x[j, k]) == demand[j];
+
+// or with definition to be included in the documentations
+Constraint flowBalance =
+    key("flowbal")
+    | "Flow balance constraints for every node j."
+    | forall(j)
+    | sum(over(i), x[i, j]) - sum(over(k), x[j, k]) == demand[j];</code></pre></div></div><p>
+            Similarly, keys and definitions can be included in or omitted from objective function definitions.
+            
+            <div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs">// no details
+Objective minTotalCost =
+    minimize
+    | sum(over(j, i), costFlow[i, j] * x[i, j]);
+
+// only key
+Objective minTotalCost =
+    key("totalcost")
+    | minimize
+    | sum(over(j, i), costFlow[i, j] * x[i, j]);
+
+// with definition to be included in the documentations
+Objective minTotalCost =
+    key("totalcost")
+    | "Total flow cost of all edges."
+    | minimize
+    | sum(over(j, i), costFlow[i, j] * x[i, j]);</code></pre></div></div></p></td></tr><tr><td><a href="1adfe3dd-9b05-9195-6796-900e2c115347.htm">over(Set)</a></td><td>
+            Creates a sum-over expression for a summation.
+            
+            <div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs">Constraint flowBalance =
+    forall(j)
+    | sum(over(i), x[i, j]) - sum(over(k), x[j, k]) == demand[j];</code></pre></div></div></td></tr><tr><td><a href="76d7fed7-2fd4-5a5b-c038-f4302602fa76.htm">over(Set, Set)</a></td><td>
+            Creates a sum-over expression for a summation.
+            
+            <div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs">Objective minTotalCost =
+    minimize
+    | sum(over(j, i), costFlow[i, j] * x[i, j] + costDesign[i, j] * y[i, j]);</code></pre></div></div></td></tr><tr><td><a href="4dea11b1-065f-8fad-ea10-688a74c4e287.htm">over(Set, Set, Set)</a></td><td>
+            Creates a sum-over expression for a summation.
+            
+            <div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs">Objective minTotalCost =
+    minimize
+    | sum(over(j, i, c), costFlow[i, j] * x[i, j, c]);</code></pre></div></div></td></tr><tr><td><a href="c6b884fc-3f6a-abcb-164c-af8e9a3992a5.htm">over(Set, Set, Set, Set)</a></td><td>
+            Creates a sum-over expression for a summation.
+            
+            <div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs">Objective minTotalCost =
+    minimize
+    | sum(over(t, j, i, c), costFlow[i, j] * x[i, j, c] * alpha[t]);</code></pre></div></div></td></tr><tr><td><a href="3b3bd433-76bb-84d4-d4e7-d485aa8c1b43.htm">Parameter</a></td><td>
+            Initiates a parameter builder for different dimensions (<a href="af89ed43-38d2-dd63-2b1a-f97cd6741206.htm">ParD0</a>, <a href="e4348208-fd7f-b6a1-98bd-c33521647646.htm">ParD1</a>, <a href="6915174e-9e72-a17c-24b5-b175f52d09f1.htm">ParD2</a>, etc.).
+            
+            <p>
+            Builder pattern is used for creating all mathematical symbols, to make creating rather complicated variants more convenient.
+            </p><div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs">ParD0 bigM = Parameter("M").Represents("sufficiently large number").HasValue(Math.Max(demands.Max(), capacities.Max()));
+ParD0 lazyBigM = Parameter("M").Represents("sufficiently large number").HasValue(() =&gt; Math.Max(demands.Max(), capacities.Max()));
+
+ParD1 demand = Parameter("dem").Represents("Node demand; i.e., amount of flow that needs to be transported to each node.")
+    .HasIndices(i).HasValues(data.NodeDemand);
+
+ParD2 costFlow = Parameter("c").Represents("Unit flow cost on edge (i, j).").HasIndices(i, j).HasValues(data.EdgeFlowCost);
+
+// or definitions can be omitted; however, they might be useful in automatically generated LaTex, html or text documentations.
+ParD0 bigM = Parameter("M").HasValue(Math.Max(demands.Max(), capacities.Max()));
+ParD0 lazyBigM = Parameter("M").HasValue(() =&gt; Math.Max(demands.Max(), capacities.Max()));
+ParD1 demand = Parameter("dem").HasIndices(i).HasValues(data.NodeDemand);
+ParD2 costFlow = Parameter("c").HasIndices(i, j).HasValues(data.EdgeFlowCost);</code></pre></div></div></td></tr><tr><td><a href="0385e888-c935-c43d-7bc2-17474ce2a504.htm">Set</a></td><td>
+            Initiates a <a href="e26c1ac6-aca2-9af1-2a70-cdfb5412a96d.htm">Set</a> builder.
+            
+            <p>
+            Builder pattern is used for creating all mathematical symbols, to make creating rather complicated variants more convenient.
+            </p><p>Some example set constructions are given below:</p><div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs">Set j = Set("j").Represents("Nodes of the network.").HasElementsUntil(data.NumNodes);
+Set i = Set("i").Represents("Tails of edges incoming to j").DependsOn(j).HasElements(data.TailsOf);
+Set k = Set("k").Represents("Heads of edges outgoing from j").DependsOn(j).HasElements(data.HeadsOf);
+
+// or definitions can be omitted; however, they might be useful in automatically generated LaTex, html or text documentations.
+Set j = Set("j").HasElementsUntil(data.NumNodes);
+Set i = Set("i").DependsOn(j).HasElements(data.TailsOf);
+Set k = Set("k").DependsOn(j).HasElements(data.HeadsOf);</code></pre></div></div></td></tr><tr><td><a href="666045d0-0e50-1047-bb27-df113b9f6dfc.htm">sum</a></td><td>
+            Creates a summation with the given sum over sets expression and linear expression.
+            </td></tr><tr><td><a href="0d2f5d5e-419b-7189-8754-3d39d55a3f72.htm">Variable</a></td><td>
+            Initiates a variable builder for different dimensions (<a href="16abb95a-df22-05c0-304a-cc86c1ccd98c.htm">VarD0</a>, <a href="33bb4b03-8e33-08aa-930d-5328c6b7b7c1.htm">VarD1</a>, <a href="e5855b03-aa28-38d9-75eb-04f403331b7a.htm">VarD2</a>, etc.).
+            
+            <p>
+            Builder pattern is used for creating all mathematical symbols, to make creating rather complicated variants more convenient.
+            </p><div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs">VarD0 maxTardiness = Variable("maxTard").Represents("Maximum tardiness of all tasks").IsContinuous().IsNonnegative();
+
+VarD1 y = Variable("y").Represents("Whether or not location p is included in the design").HasIndices(p).IsBinary();
+
+VarD2 x = Variable("x").Represents("Amount of flow on each edge (i, j)").HasIndices(i, j).IsContinuous().WithBounds(0.0, getEdgeCapacity);
+
+// or definitions can be omitted; however, they might be useful in automatically generated LaTex, html or text documentations.
+VarD0 maxTardiness = Variable("maxTard").IsContinuous().IsNonnegative();
+VarD1 y = Variable("y").HasIndices(p).IsBinary();
+VarD2 x = Variable("x").HasIndices(i, j).IsContinuous().WithBounds(0.0, getEdgeCapacity);</code></pre></div></div></td></tr><tr><td><a href="a2d684f0-eb1a-5a2f-b486-b8fea28fa887.htm">WithBounds(VariableBuilderType<span id="LST42AEBFAA_84" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension0<span id="LST42AEBFAA_85" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, Double, Double)</a></td><td>
+            Finalizes the variable builder and returns the resulting 0-dimensional variable <a href="16abb95a-df22-05c0-304a-cc86c1ccd98c.htm">VarD0</a>.
+            <p>
+            The resulting variable has the given lower and upper bounds.
+            </p></td></tr><tr><td><a href="763c1309-9798-78de-2dcf-caf66a061188.htm">WithBounds(VariableBuilderType<span id="LST42AEBFAA_86" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension0<span id="LST42AEBFAA_87" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, Double, Func<span id="LST42AEBFAA_88" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Double<span id="LST42AEBFAA_89" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 0-dimensional variable <a href="16abb95a-df22-05c0-304a-cc86c1ccd98c.htm">VarD0</a>.
+            <p>
+            The resulting variable has the given lower and upper bounds.
+            </p></td></tr><tr><td><a href="c96dc4a4-36f9-4a28-e77a-9ade06110d1d.htm">WithBounds(VariableBuilderType<span id="LST42AEBFAA_90" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension0<span id="LST42AEBFAA_91" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, Func<span id="LST42AEBFAA_92" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Double<span id="LST42AEBFAA_93" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, Double)</a></td><td>
+            Finalizes the variable builder and returns the resulting 0-dimensional variable <a href="16abb95a-df22-05c0-304a-cc86c1ccd98c.htm">VarD0</a>.
+            <p>
+            The resulting variable has the given lower and upper bounds.
+            </p></td></tr><tr><td><a href="ff4242d2-e8e2-4a35-2eec-2a44044544e0.htm">WithBounds(VariableBuilderType<span id="LST42AEBFAA_94" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension0<span id="LST42AEBFAA_95" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, Func<span id="LST42AEBFAA_96" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Double<span id="LST42AEBFAA_97" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, Func<span id="LST42AEBFAA_98" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Double<span id="LST42AEBFAA_99" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 0-dimensional variable <a href="16abb95a-df22-05c0-304a-cc86c1ccd98c.htm">VarD0</a>.
+            <p>
+            The resulting variable has the given lower and upper bounds.
+            </p></td></tr><tr><td><a href="f237e8e5-ab83-2abf-0a13-6d23624be17e.htm">WithBounds(VariableBuilderType<span id="LST42AEBFAA_100" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension1<span id="LST42AEBFAA_101" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, FunVec1<span id="LST42AEBFAA_102" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Double<span id="LST42AEBFAA_103" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, FunVec1<span id="LST42AEBFAA_104" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Double<span id="LST42AEBFAA_105" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 1-dimensional variable <a href="33bb4b03-8e33-08aa-930d-5328c6b7b7c1.htm">VarD1</a>.
+            <p>
+            The resulting variable has the given lower and upper bounds.
+            </p></td></tr><tr><td><a href="50810a6d-8cb4-e7b1-be7a-b43a29dbceee.htm">WithBounds(VariableBuilderType<span id="LST42AEBFAA_106" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension1<span id="LST42AEBFAA_107" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, FunVec1<span id="LST42AEBFAA_108" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Double<span id="LST42AEBFAA_109" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, Double)</a></td><td>
+            Finalizes the variable builder and returns the resulting 1-dimensional variable <a href="33bb4b03-8e33-08aa-930d-5328c6b7b7c1.htm">VarD1</a>.
+            <p>
+            The resulting variable has the given lower and upper bounds.
+            </p></td></tr><tr><td><a href="3adfa7e1-364d-66a5-ad57-a305b56ddc37.htm">WithBounds(VariableBuilderType<span id="LST42AEBFAA_110" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension1<span id="LST42AEBFAA_111" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, Double, FunVec1<span id="LST42AEBFAA_112" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Double<span id="LST42AEBFAA_113" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 1-dimensional variable <a href="33bb4b03-8e33-08aa-930d-5328c6b7b7c1.htm">VarD1</a>.
+            <p>
+            The resulting variable has the given lower and upper bounds.
+            </p></td></tr><tr><td><a href="3e3cc5d2-c2ba-a1d3-f646-4f4ae5bf3dfe.htm">WithBounds(VariableBuilderType<span id="LST42AEBFAA_114" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension1<span id="LST42AEBFAA_115" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, Double, Double)</a></td><td>
+            Finalizes the variable builder and returns the resulting 1-dimensional variable <a href="33bb4b03-8e33-08aa-930d-5328c6b7b7c1.htm">VarD1</a>.
+            <p>
+            The resulting variable has the given lower and upper bounds.
+            </p></td></tr><tr><td><a href="c6359fc6-cd84-f249-bac5-1a74f0c96e73.htm">WithBounds(VariableBuilderType<span id="LST42AEBFAA_116" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension2<span id="LST42AEBFAA_117" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, FunVec2<span id="LST42AEBFAA_118" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Double<span id="LST42AEBFAA_119" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, FunVec2<span id="LST42AEBFAA_120" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Double<span id="LST42AEBFAA_121" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 2-dimensional variable <a href="e5855b03-aa28-38d9-75eb-04f403331b7a.htm">VarD2</a>.
+            <p>
+            The resulting variable has the given lower and upper bounds.
+            </p></td></tr><tr><td><a href="c8327045-2fb0-1d9a-c5b1-a950ea5db5ab.htm">WithBounds(VariableBuilderType<span id="LST42AEBFAA_122" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension2<span id="LST42AEBFAA_123" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, FunVec2<span id="LST42AEBFAA_124" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Double<span id="LST42AEBFAA_125" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, Double)</a></td><td>
+            Finalizes the variable builder and returns the resulting 2-dimensional variable <a href="e5855b03-aa28-38d9-75eb-04f403331b7a.htm">VarD2</a>.
+            <p>
+            The resulting variable has the given lower and upper bounds.
+            </p></td></tr><tr><td><a href="7f5cfe65-f2f8-b32e-870d-6a5855aaee96.htm">WithBounds(VariableBuilderType<span id="LST42AEBFAA_126" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension2<span id="LST42AEBFAA_127" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, Double, FunVec2<span id="LST42AEBFAA_128" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Double<span id="LST42AEBFAA_129" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 2-dimensional variable <a href="e5855b03-aa28-38d9-75eb-04f403331b7a.htm">VarD2</a>.
+            <p>
+            The resulting variable has the given lower and upper bounds.
+            </p></td></tr><tr><td><a href="c939dcac-fb42-7b5b-590a-e989e5f57bbe.htm">WithBounds(VariableBuilderType<span id="LST42AEBFAA_130" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension2<span id="LST42AEBFAA_131" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, Double, Double)</a></td><td>
+            Finalizes the variable builder and returns the resulting 2-dimensional variable <a href="e5855b03-aa28-38d9-75eb-04f403331b7a.htm">VarD2</a>.
+            <p>
+            The resulting variable has the given lower and upper bounds.
+            </p></td></tr><tr><td><a href="d4ecaf2d-c577-21ac-49d2-4688c9bb71c2.htm">WithBounds(VariableBuilderType<span id="LST42AEBFAA_132" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension3<span id="LST42AEBFAA_133" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, FunVec3<span id="LST42AEBFAA_134" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Double<span id="LST42AEBFAA_135" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, FunVec3<span id="LST42AEBFAA_136" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Double<span id="LST42AEBFAA_137" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 3-dimensional variable <a href="7c186f1b-554a-45d7-3a0e-e31ac57dd66e.htm">VarD3</a>.
+            <p>
+            The resulting variable has the given lower and upper bounds.
+            </p></td></tr><tr><td><a href="018253af-765e-be9a-4e97-dff47d2ade51.htm">WithBounds(VariableBuilderType<span id="LST42AEBFAA_138" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension3<span id="LST42AEBFAA_139" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, FunVec3<span id="LST42AEBFAA_140" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Double<span id="LST42AEBFAA_141" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, Double)</a></td><td>
+            Finalizes the variable builder and returns the resulting 3-dimensional variable <a href="7c186f1b-554a-45d7-3a0e-e31ac57dd66e.htm">VarD3</a>.
+            <p>
+            The resulting variable has the given lower and upper bounds.
+            </p></td></tr><tr><td><a href="6e2731d4-5402-4d5e-2d00-b457cfcd4943.htm">WithBounds(VariableBuilderType<span id="LST42AEBFAA_142" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension3<span id="LST42AEBFAA_143" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, Double, FunVec3<span id="LST42AEBFAA_144" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Double<span id="LST42AEBFAA_145" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 3-dimensional variable <a href="7c186f1b-554a-45d7-3a0e-e31ac57dd66e.htm">VarD3</a>.
+            <p>
+            The resulting variable has the given lower and upper bounds.
+            </p></td></tr><tr><td><a href="d7c8e32d-afad-aafb-673b-79319068abfb.htm">WithBounds(VariableBuilderType<span id="LST42AEBFAA_146" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension3<span id="LST42AEBFAA_147" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, Double, Double)</a></td><td>
+            Finalizes the variable builder and returns the resulting 3-dimensional variable <a href="7c186f1b-554a-45d7-3a0e-e31ac57dd66e.htm">VarD3</a>.
+            <p>
+            The resulting variable has the given lower and upper bounds.
+            </p></td></tr><tr><td><a href="65f2414d-2b3f-11cf-9ae8-7e49ab366152.htm">WithBounds(VariableBuilderType<span id="LST42AEBFAA_148" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension4<span id="LST42AEBFAA_149" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, FunVec4<span id="LST42AEBFAA_150" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Double<span id="LST42AEBFAA_151" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, FunVec4<span id="LST42AEBFAA_152" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Double<span id="LST42AEBFAA_153" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 4-dimensional variable <a href="61c87635-6fa7-0ca4-324a-ccaa2c13aa0b.htm">VarD4</a>.
+            <p>
+            The resulting variable has the given lower and upper bounds.
+            </p></td></tr><tr><td><a href="d111830f-3057-b1c7-3750-a54b3e212829.htm">WithBounds(VariableBuilderType<span id="LST42AEBFAA_154" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension4<span id="LST42AEBFAA_155" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, FunVec4<span id="LST42AEBFAA_156" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Double<span id="LST42AEBFAA_157" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, Double)</a></td><td>
+            Finalizes the variable builder and returns the resulting 4-dimensional variable <a href="61c87635-6fa7-0ca4-324a-ccaa2c13aa0b.htm">VarD4</a>.
+            <p>
+            The resulting variable has the given lower and upper bounds.
+            </p></td></tr><tr><td><a href="9e32e582-6525-fa0c-020e-15092ebd5ab2.htm">WithBounds(VariableBuilderType<span id="LST42AEBFAA_158" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension4<span id="LST42AEBFAA_159" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, Double, FunVec4<span id="LST42AEBFAA_160" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Double<span id="LST42AEBFAA_161" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Finalizes the variable builder and returns the resulting 4-dimensional variable <a href="61c87635-6fa7-0ca4-324a-ccaa2c13aa0b.htm">VarD4</a>.
+            <p>
+            The resulting variable has the given lower and upper bounds.
+            </p></td></tr><tr><td><a href="f2b58e2b-2262-ba43-9d0a-8316f4d28e73.htm">WithBounds(VariableBuilderType<span id="LST42AEBFAA_162" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Dimension4<span id="LST42AEBFAA_163" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, Double, Double)</a></td><td>
+            Finalizes the variable builder and returns the resulting 4-dimensional variable <a href="61c87635-6fa7-0ca4-324a-ccaa2c13aa0b.htm">VarD4</a>.
+            <p>
+            The resulting variable has the given lower and upper bounds.
+            </p></td></tr></table></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>See Also</h2><div id="seeAlsoSection"><h4>Reference</h4><div><a href="392402f0-d1a1-79d7-560e-52c6b77bcfce.htm">MathProgExtensions Class</a></div><div><a href="b58113de-60d8-4f5d-76d7-a9e96ffb2213.htm">Orx.MathProg Namespace</a></div></div></div><div id="InThisArticleColumn" class="column is-hidden-mobile"><nav class="menu sticky is-hidden"><p class="menu-label"><strong>In This Article</strong></p><ul id="InThisArticleMenu" class="menu-list"><li><a class="quickLink">Methods</a></li><li><a class="quickLink">See Also</a></li></ul></nav></div></div></div><footer id="PageFooter" class="footer border-top py-3 fixedFooter"><div class="columns"><div class="column">https://github.com/orxfun/orx-mathprog-gallery<div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:orx.ugur.arikan%40gmail.com?Subject=Orx.MathProg%20(C#)">orx.ugur.arikan@gmail.com</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script> 
+				</div><div class="column"> 
+				</div></div></footer></div><script>$(function(){
+SetDefaultLanguage("cs");
+LoadTocFile(null, null);
+InitializeQuickLinks();
+
+$(".toggleSection" ).click(function () {
+    SectionExpandCollapse(this);
+});
+
+$(".toggleSection").keypress(function () {
+    SectionExpandCollapseCheckKey(this, event)
+});
+hljs.highlightAll();
+});</script></body></html>
