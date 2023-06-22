@@ -1,6 +1,10 @@
 {
     "list": [
         {
+            "dir": "knapsack",
+            "galleryClass": "KnapsackProblem"
+        },
+        {
             "dir": "min_cost_network_flow",
             "galleryClass": "MinCostNetworkFlowProblem"
         },

@@ -90,35 +90,41 @@
 </head>
 
 <body>
-    <h1>Minimum Cost Network Flow Problem</h1>
+    <h1>Knapsack Problem</h1>
 
     <p>
-        <a href="https://en.wikipedia.org/wiki/Minimum-cost_flow_problem">Wikipedia</a>
+        <a href="https://en.wikipedia.org/wiki/Knapsack_problem">Wikipedia</a>
     </p>
     <p>
-        The minimum-cost flow problem (MCFP) is an optimization and decision problem to find the cheapest possible way
-        of sending a certain amount of flow through a flow network. A typical application of this problem involves
-        finding the best delivery route from a factory to a warehouse where the road network has some capacity and cost
-        associated. The minimum cost flow problem is one of the most fundamental among all flow and circulation problems
-        because most other such problems can be cast as a minimum cost flow problem and also that it can be solved
-        efficiently using the network simplex algorithm.
+        Given a set of items, each with a weight and a value, determine which items to include in the collection so that
+        the total weight is less than or equal to a given limit and the total value is as large as possible.
     </p>
+    <p>
+        The knapsack problem has been studied for more than a century, with early works dating as far back as 1897.
+    </p>
+    <p>
+        Knapsack problems appear in real-world decision-making processes in a wide variety of fields, such as finding
+        the least wasteful way to cut raw materials,[2] selection of investments and portfolios,[3] selection of assets
+        for asset-backed securitization,[4] and generating keys for the Merkle-Hellman[5] and other knapsack
+        cryptosystems.
+    </p>
+
     <h2>Mathematical Formulation</h2>
-    Let `N` be set of nodes and `(i,j) \in A` be an arc of the graph `G = (N, A)` with weight `w_{ij}`.
-    Further, let `b_i` be the demand if `i` is the source (starting) node; -demand if it is the sink (ending) node; and
-    0 otherwise.
-    Finally, let `\text{cap}_{ij}` be the capacity of edge (i,j).
-    The optimal solution to the following program provides the minimum cost network flow for the demand from its
-    esignated source to the sink.
+    <p>
+        Let `I` be set of available items.
+        For each item `i \in I`, let `v_i` be the value of placing item i to the knapsack and `w_i` be the corresponding
+        weight.
+        Finally, let `C` be the total capacity of the knapsack in terms of weight.
+    </p>
 
     <table class="orx-mathmodel">
         <tbody>
-            <tr title="dist: minimize total path distance">
+            <tr title="knapsack-value: maximize value of the knapsack">
                 <td>
-                    `\min`
+                    `\max`
                 </td>
                 <td>
-                    `\sum_{j\in N} \text{ } \sum_{k \in N:(j,k)\in A} w_{jk} \times x_{jk}`
+                    `\sum_{i\in I} \text{ } v_{i} \times x_{i}`
                 </td>
                 <td>
 
@@ -127,24 +133,24 @@
                     (1)
                 </td>
             </tr>
-            <tr title="flowbal: flow balance constraints">
+            <tr title="knapsack-capacity: knapsack capacity constraint">
                 <td>
                     `\text{subject to}`
                 </td>
                 <td>
-                    `\sum_{k \in N:(j,k)\in A}x_{jk} - \sum_{i \in N:(i,j)\in A}x_{ij} = b_{j}`
+                    `\sum_{i \in I}w_i \times x_{i} &lt;= C`
                 </td>
                 <td>
-                    `\forall j \in N`
+
                 </td>
                 <td>
                     (2)
                 </td>
             </tr>
-            <tr title="flow variables">
+            <tr title="packing variables">
                 <td></td>
-                <td>`0 &lt;= x_{ij} &lt;= \text{cap}_{ij}`</td>
-                <td>`\forall (i,j)\in A`</td>
+                <td>`x_{i} \in \{0, 1\}`</td>
+                <td>`\forall i\in I`</td>
                 <td>(3)</td>
             </tr>
         </tbody>

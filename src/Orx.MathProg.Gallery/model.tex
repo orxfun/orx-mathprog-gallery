@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\title{KP - Knapsack Problem}\begin{document}
+\maketitle
+
+\section{Sets}
+\begin{tabular}{ p{0.10\linewidth} p{0.55\linewidth} p{0.35\linewidth} }
+ $i$ & available items & [0, 5] \\ 
+\end{tabular}
+
+
+\section{Parameters}
+\begin{tabular}{ p{0.10\linewidth} p{0.55\linewidth} p{0.35\linewidth} }
+ $v_{i}$ & value of packing item i & values \\ 
+ $C$ & total capacity of the knapsack & capacity \\ 
+ $w_{i}$ & weight of item i & weights \\ 
+\end{tabular}
+
+
+\section{Variables}
+\begin{tabular}{ p{0.10\linewidth} p{0.55\linewidth} p{0.35\linewidth} }
+ $x_{i}$ & 1 if item i is packed in the knapsack; 0 otherwise & $ \in { 0, 1 } $ \\ 
+\end{tabular}
+
+
+\section{Model}
+\begin{align}
+\max \qquad & \sum_{i}v_{i}x_{i} \label{MODELOBJECTIVE}  \\ 
+\text{s.t.} \qquad  & \sum_{i}w_{i}x_{i} \leq C \label{MODELCONSTRAINT0} 
+\end{align}
+\subsection{Objective: maximize knapsack value}
+
+
+maximize total value of packed items in the knapsack
+\subsection{Constraint: knapsack capacity}
+
+
+total weight of packed items cannot exceed the knapsack capacity
+
+\end{document}

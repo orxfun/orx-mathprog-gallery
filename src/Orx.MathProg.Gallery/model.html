@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>orx-search-mathmodel</title>
+    <script async="true" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"> </script>
+    <style>
+        body {
+            font-family: 'Lucida', monospace;
+            font-size: larger;
+            padding: 3em 15%;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            background-color: gray;
+            margin-top: 2em;
+            padding: 0.5em 1.0em;
+            border-radius: 0.2em;
+            font-size: 1.5em;
+            font-weight: normal;
+        }
+
+        .orx-mathmodel-symbols {
+            padding: 0 2em;
+            display: grid;
+            grid-template-columns: 5em auto auto;
+            column-gap: 1em;
+            row-gap: 1em;
+        }
+
+        .orx-mathmodel-symbols>.title {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            margin-top: 1.0em;
+            border-bottom: 0.1em solid lightgray;
+        }
+
+        .orx-mathmodel-symbol>div {
+            display: flex;
+            align-items: center;
+        }
+
+        .orx-mathmodel {
+            width: 100%;
+            padding: 0 2em;
+        }
+
+        .orx-mathmodel tr {
+            height: 4em;
+        }
+
+        .orx-mathmodel td {
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+
+        .orx-mathmodel tr td:nth-child(1) {
+            text-align: right;
+        }
+
+        .orx-mathmodel-explanations {
+            padding-top: 2em;
+        }
+
+        .orx-mathmodel-explanations ol {
+            list-style-type: none;
+        }
+
+        .orx-mathmodel-explanations li {
+            counter-increment: section;
+        }
+
+        .orx-mathmodel-explanations li::before {
+            content: "(" counter(section) ") ";
+        }
+
+        .orx-mathmodel-explanations strong {
+            font-weight: normal;
+            color: darkred;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            var modelTableRows = document.querySelectorAll(".orx-mathmodel>tbody>tr");
+            for (let r = 0; r < modelTableRows.length; r++) {
+                const row = modelTableRows[r];
+                row.addEventListener("mouseover", function () {
+                    this.style.color = 'darkred';
+                    this.style.backgroundColor = 'inherit';
+                });
+                row.addEventListener("mouseout", function () {
+                    this.style.color = 'inherit';
+                    this.style.backgroundColor = 'inherit';
+                });
+            }
+        });
+
+    </script>
+</head>
+
+<body>
+
+<h1>
+KP - Knapsack Problem
+</h1>
+<h2>
+Definitions
+</h2>
+<div class="orx-mathmodel-symbols">
+<div class="title">Sets</div>
+
+<div>
+`i`
+</div>
+<div>
+available items
+</div>
+<div>
+[0, 5]
+</div>
+
+
+<div class="title">Parameters</div>
+
+<div>
+`v_{i}`
+</div>
+<div>
+value of packing item i
+</div>
+<div>
+values
+</div>
+
+<div>
+`C`
+</div>
+<div>
+total capacity of the knapsack
+</div>
+<div>
+capacity
+</div>
+
+<div>
+`w_{i}`
+</div>
+<div>
+weight of item i
+</div>
+<div>
+weights
+</div>
+
+
+<div class="title">Variables</div>
+
+<div>
+`x_{i}`
+</div>
+<div>
+1 if item i is packed in the knapsack; 0 otherwise
+</div>
+<div>
+` \in { 0, 1 } `
+</div>
+
+
+</div>
+<h2>
+Formulation
+</h2>
+<table class="orx-mathmodel">
+<tbody>
+<tr title="knapsack_value: maximize total value of packed items in the knapsack">
+<td>
+`\max`
+</td>
+<td>
+`\sum_{i}v_{i}x_{i}`
+</td>
+<td>
+
+</td>
+<td>
+(1)
+</td>
+</tr>
+<tr title="knapsack_capacity: total weight of packed items cannot exceed the knapsack capacity">
+<td>
+`\text{subject to}`
+</td>
+<td>
+` \sum_{i}w_{i}x_{i} \leq C`
+</td>
+<td>
+
+</td>
+<td>
+(2)
+</td>
+</tr>
+</tbody>
+</table>
+<div class="orx-mathmodel-explanations">
+<ol>
+<li>
+<strong>knapsack_value</strong>: maximize total value of packed items in the knapsack
+</li>
+<li>
+<strong>knapsack_capacity</strong>: total weight of packed items cannot exceed the knapsack capacity
+</li>
+</ol>
+</div>
+</body>
+
+</html>
