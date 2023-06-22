@@ -1,4 +1,4 @@
-﻿namespace Orx.MathProg.Gallery.NetworkFlow.ShortestPathProblem;
+﻿namespace Orx.MathProg.Gallery.ShortestPathProblem;
 
 public class Model
 {
@@ -6,13 +6,10 @@ public class Model
     readonly VarD2 x;
     public readonly MathModel MathModel;
 
-    // generic over inputs
     public Model(Input input)
     {
         this.input = input;
         var (n, tails, heads, weights, s, t) = input;
-
-        // setup
         double getB(int nodeIndex)
         {
             if (nodeIndex == s) return 1.0;
