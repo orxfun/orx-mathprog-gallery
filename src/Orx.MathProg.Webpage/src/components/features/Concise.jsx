@@ -23,8 +23,7 @@ export default function Concise() {
 
             <div className="centered">
                 <p>
-                    We are used to writing concise, often less than a page, mathematical programs defining real life problems.
-                    This brings two important advantages.
+                    Mathematical programs are concise, often require less than a page to  express a real life problem.
                 </p>
 
                 <div>

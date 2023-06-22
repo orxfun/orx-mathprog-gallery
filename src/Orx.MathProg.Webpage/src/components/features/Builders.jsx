@@ -5,14 +5,14 @@ export default function Builders() {
 
             <div className="centered">
                 <p>
-                    Never noticed until a scala developer defending the dot notation
-                    mentioned the significance of an ide's auto-completion in this preference.
+                    dot notation <strong>&</strong> ide auto-completion
                 </p>
-
                 <p>
-                    Together with type-safe builder pattern,
-                    it lets us avoid complex constructors
-                    and provides easy to read & write definitions.
+                    <strong>&&</strong> type-safe builder pattern
+                </p>
+                <p>
+                    let us avoid complex constructors
+                    and provide easy to read & write definitions.
                 </p>
 
                 <p>

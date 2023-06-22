@@ -7,15 +7,12 @@ export default function GenericSolvers() {
                     Nothing special here.
                 </p>
                 <p>
-                    We don't think about the solver to be used while modeling a real life problem.
-                </p>
-                <p>
-                    Likewise, a <code>MathModel</code> does not have solver specific terms or syntax.
+                    We don't think about the solver while modeling a real life problem,
+                    similarly not while creating a <code>MathModel</code>.
                 </p>
                 <p>
                     Although not all solvers are supported right now,
-                    the design allows adding them.
-                    Available solvers will grow in time (see todos).
+                    that is the goal (see todos).
                 </p>
             </div>
         </div>

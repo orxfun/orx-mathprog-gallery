@@ -14,50 +14,61 @@ public class Model
         Input = input;
         var (numItems, values, weights, capacity) = input;
 
-        // sets
-        Set i = Set("i").Represents("available items").HasElementsUntil(numItems);
+
+        // Concise Version
+        {
+            Set i = Set("i").HasElementsUntil(numItems);
+
+            ParD1 w = Parameter("w").HasIndices(i).HasValues(weights);
+            ParD1 v = Parameter("v").HasIndices(i).HasValues(values);
+            ParD0 C = Parameter("C").HasValue(capacity);
+
+            VarD1 x = Variable("x").HasIndices(i).IsBinary();
+
+            Constraint knapsackCapacity = sum(over(i), w[i] * x[i]) <= C;
+            Objective maxValue = maximize | sum(over(i), v[i] * x[i]);
+
+            MathModel = MathModel.New().WithObjective(maxValue).HasConstraints(knapsackCapacity);
+        }
 
 
-        // variables
-        x = Variable("x").Represents("1 if item i is packed in the knapsack; 0 otherwise")
-            .HasIndices(i)
-            .IsBinary();
+        // Documented Version
+        {
+            // sets
+            Set i = Set("i").Represents("available items").HasElementsUntil(numItems);
+
+            // variables
+            x = Variable("x").Represents("1 if item i is packed in the knapsack; 0 otherwise")
+                .HasIndices(i)
+                .IsBinary();
+
+            // parameters
+            ParD1 w = Parameter("w").Represents("weight of item i")
+                .HasIndices(i)
+                .HasValues(weights);
+
+            ParD1 v = Parameter("v").Represents("value of packing item i")
+                .HasIndices(i)
+                .HasValues(values);
 
 
-        // parameters
-        ParD1 w = Parameter("w").Represents("weight of item i")
-            .HasIndices(i)
-            .HasValues(weights);
+            ParD0 C = Parameter("C").Represents("total capacity of the knapsack")
+                .HasValue(capacity);
 
-        ParD1 v = Parameter("v").Represents("value of packing item i")
-            .HasIndices(i)
-            .HasValues(values);
+            // model
+            Constraint knapsackCapacity = key("knapsack_capacity")
+                | "total weight of packed items cannot exceed the knapsack capacity"
+                | sum(over(i), w[i] * x[i]) <= C;
 
+            Objective maxValue = key("knapsack_value")
+                | "maximize total value of packed items in the knapsack"
+                | maximize
+                | sum(over(i), v[i] * x[i]);
 
-        ParD0 C = Parameter("C").Represents("total capacity of the knapsack")
-            .HasValue(capacity);
-
-
-        // model - concise
-        Constraint knapsackCapacity = sum(over(i), w[i] * x[i]) <= C;
-        Objective maxValue = maximize | sum(over(i), v[i] * x[i]);
-        
-        MathModel = MathModel.New().WithObjective(maxValue).HasConstraints(knapsackCapacity);
-
-
-        // model - documented
-        knapsackCapacity = key("knapsack_capacity")
-            | "total weight of packed items cannot exceed the knapsack capacity"
-            | sum(over(i), w[i] * x[i]) <= C;
-
-        maxValue = key("knapsack_value")
-            | "maximize total value of packed items in the knapsack"
-            | maximize
-            | sum(over(i), v[i] * x[i]);
-
-        MathModel = MathModel.New("KP - Knapsack Problem")
-            .WithObjective(maxValue)
-            .HasConstraints(knapsackCapacity);
+            MathModel = MathModel.New("KP - Knapsack Problem")
+                .WithObjective(maxValue)
+                .HasConstraints(knapsackCapacity);
+        }
     }
 
 

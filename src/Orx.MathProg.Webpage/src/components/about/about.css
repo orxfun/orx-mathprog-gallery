@@ -20,6 +20,50 @@
     column-gap: 5em;
 }
 
+.about .section.models {
+    grid-template-columns: 650px 1fr;
+}
+
+.about .section.models .models-carousel {
+    background-color: black;
+    border: 1px solid green;
+    border-radius: 0.5em;
+    padding: 2.5em 4em;
+}
+
+.about .section.models .models-carousel h3 {
+    color: yellowgreen;
+}
+
+.about .section.models .models-carousel img {
+    border-radius: 0.25em;
+    cursor: pointer;
+}
+
+.modal-dialog {
+    padding: max(10em, 15%) 5em;
+}
+
+.modal-body {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.modal-header {
+    align-self: center;
+    font-size: larger;
+    font-weight: bolder;
+    color: firebrick;
+}
+
+.modal-footer button {
+    width: 14%;
+    align-self: center;
+    justify-self: center;
+    margin-right: 43%;
+}
+
 .about h3 {
     font-size: medium;
     color: tomato;

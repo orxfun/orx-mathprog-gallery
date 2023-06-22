@@ -1,7 +1,7 @@
 import Code from "../Code";
 
 export default function GenericInputs() {
-    const codeParDef = `    var w = Parameter("w").Represents("weight of arc (i,j)").HasIndices(i, j).HasValues(weights);
+    const codeParDef = `    ParD2 w = Parameter("w").Represents("weight of arc (i,j)").HasIndices(i, j).HasValues(weights);
 `;
     const codeComplete = `    double[][] completeWeightsMatrix = ...;
     var weights = new FunVec2<double>(completeWeightsMatrix);
@@ -21,8 +21,8 @@ export default function GenericInputs() {
 
             <div className="centered">
                 <p>
-                    We often found ourselves making a decision on which graph representation to use.
-                    Although this decision is to be made, it is not relevant while modeling.
+                    We often decide on which graph representation to use.
+                    Although this decision is to be made, not necessarily while modeling.
                 </p>
                 <p>
                     Further, mathematical programming provides abstraction in the form of special cases.
@@ -38,10 +38,10 @@ export default function GenericInputs() {
                 </p>
                 <div className="list">
                     <p>
-                        mcnf reduces to the shortest path problem with a demand on a single pair and unit edge costs.
+                        mcnf reduces to the shortest path problem with infinite capacities and unit edge costs.
                     </p>
                     <p>
-                        We can set all demands and edge weights to 0,
+                        We can set all edge weights to 0,
                         and add an edge t to s with a weight of -1
                         to convert it into the maximum flow problem.
                     </p>
@@ -57,9 +57,6 @@ export default function GenericInputs() {
                 <p>
                     <code>Orx.MathProg</code> models allow achieving this abstraction
                     via <a href="https://github.com/orxfun/orx-fun-funvec" target="blank">functional definitions</a> of sets and parameters; i.e., inputs.
-                </p>
-                <p>
-                    Consider, for instance, the edge weights of the mcnf problem.
                 </p>
             </div>
 
@@ -96,8 +93,8 @@ export default function GenericInputs() {
 
             <div className="centered">
                 <p>
-                    We can represent all these variants as a <code>FunVec2&lt;double&gt;</code>,
-                    which is all <code>ParD2 w</code> needs.
+                    We can represent all these variants as a <code>FunVec2&lt;double&gt;</code>
+                    which can construct our parameter <code>w</code>.
                     One model can conveniently represent many problems.
                 </p>
             </div>

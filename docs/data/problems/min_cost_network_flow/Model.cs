@@ -16,33 +16,54 @@ public class Model
             return 0.0;
         }
 
-        // sets
-        Set j = Set("j").HasElementsUntil(n);
-        Set i = Set("i").DependsOn(j).HasElements(j => tails[j]);
-        Set k = Set("k").DependsOn(j).HasElements(j => heads[j]);
+        // Concise Version
+        {
+            Set j = Set("j").HasElementsUntil(n);
+            Set i = Set("i").DependsOn(j).HasElements(j => tails[j]);
+            Set k = Set("k").DependsOn(j).HasElements(j => heads[j]);
 
-        // variables
-        x = Variable("x").Represents("amount of flow on arc (i, j)")
-            .HasIndices(i, j).IsContinuous()
-            .WithBounds(0.0, edgeCapacities);
+            ParD0 d = Parameter("d").HasValue(demand);
+            ParD2 w = Parameter("w").HasIndices(i, j).HasValues(weights);
+            ParD1 b = Parameter("b").HasIndices(i).HasValues(new(getB));
 
-        // parameters
-        ParD0 d = Parameter("d").Represents("demand").HasValue(demand);
-        ParD2 w = Parameter("w").Represents("weight of arc (i,j)").HasIndices(i, j).HasValues(weights);
-        ParD1 b = Parameter("b").Represents("node balance").HasIndices(i).HasValues(new(getB), "demand if i=s; -demand if i=t; 0 o/w");
+            VarD2 x = Variable("x").HasIndices(i, j).IsContinuous().WithBounds(0.0, edgeCapacities);
 
-        // model
-        Constraint flowBalance = key("flowbal") | "flow balance constraints"
-            | forall(j)
-            | sum(over(k), x[j, k]) - sum(over(i), x[i, j]) == b[j];
+            Constraint flowBalance = forall(j) | sum(over(k), x[j, k]) - sum(over(i), x[i, j]) == b[j];
+            Objective minCost = minimize | sum(over(j, k), w[j, k] * x[j, k]);
 
-        Objective minCost = key("dist") | "minimize total cost of flow"
-            | minimize
-            | sum(over(j, k), w[j, k] * x[j, k]);
+            MathModel = MathModel.New().WithObjective(minCost).HasConstraints(flowBalance);
+        }
 
-        MathModel = MathModel.New("MCNF - minimum-cost network flow")
-            .WithObjective(minCost)
-            .HasConstraints(flowBalance);
+        // Documented Version
+        {
+            // sets
+            Set j = Set("j").HasElementsUntil(n);
+            Set i = Set("i").DependsOn(j).HasElements(j => tails[j]);
+            Set k = Set("k").DependsOn(j).HasElements(j => heads[j]);
+
+            // variables
+            x = Variable("x").Represents("amount of flow on arc (i, j)")
+                .HasIndices(i, j).IsContinuous()
+                .WithBounds(0.0, edgeCapacities);
+
+            // parameters
+            ParD0 d = Parameter("d").Represents("demand").HasValue(demand);
+            ParD2 w = Parameter("w").Represents("weight of arc (i,j)").HasIndices(i, j).HasValues(weights);
+            ParD1 b = Parameter("b").Represents("node balance").HasIndices(i).HasValues(new(getB), "demand if i=s; -demand if i=t; 0 o/w");
+
+            // model
+            Constraint flowBalance = key("flowbal") | "flow balance constraints"
+                | forall(j)
+                | sum(over(k), x[j, k]) - sum(over(i), x[i, j]) == b[j];
+
+            Objective minCost = key("dist") | "minimize total cost of flow"
+                | minimize
+                | sum(over(j, k), w[j, k] * x[j, k]);
+
+            MathModel = MathModel.New("MCNF - minimum-cost network flow")
+                .WithObjective(minCost)
+                .HasConstraints(flowBalance);
+        }
     }
 
     // generic over solvers

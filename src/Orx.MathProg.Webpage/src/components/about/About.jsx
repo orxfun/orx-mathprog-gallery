@@ -1,6 +1,10 @@
+import ConciseModel from './ConciseModel';
 import './about.css'
 
-export default function About() {
+export default function About({ conciseModels }) {
+
+    const conciseModel = <ConciseModel conciseModels={conciseModels} />;
+
     return (
         <div className='about'>
             <div className='section'>
@@ -9,23 +13,24 @@ export default function About() {
                     <p>
                         <code>Orx.MathProg</code> is a strongly typed mathematical modeling library in
                         <img className='img-inline' src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/C_Sharp_wordmark.svg/1280px-C_Sharp_wordmark.svg.png' alt='C#'></img>
-                        which aims to get as close as possible to the mathematical programming style that
-                        we are used to with paper and pen,
+                        which aims to get as close as possible to writing the mathematical program with paper and pen.
                     </p>
                     <p>
-                        with a clean syntax avoiding
+                        In order to do so, it avoids
                         boilerplate,
                         verbose expressions,
                         complex constructors
                         and mutability
-                        while providing the separation between model and data.
+                    </p>
+                    <p>
+                        Finally, it emphasizes the separation of data from the model.
                     </p>
                 </div>
                 <img src='./img/book-and-pen.png' title='<a href="https://www.flaticon.com/free-icons/book" title="book icons">Book icons created by Freepik - Flaticon</a>'></img>
             </div>
 
-            <div className='section'>
-                <img src='./img/variable-x.png'></img>
+            <div className='section models'>
+                {conciseModel}
                 <div>
                     <h2>for whom?</h2>
 
@@ -54,11 +59,7 @@ export default function About() {
                             Reusable & immutable model elements.
                         </p>
                         <p>
-                            Generic over inputs,
-                            one model to represent a problem together with its special cases.
-                        </p>
-                        <p>
-                            Generic over solvers.
+                            Generic over inputs and generic over solvers.
                         </p>
                         <p>
                             Builder pattern to conveniently build

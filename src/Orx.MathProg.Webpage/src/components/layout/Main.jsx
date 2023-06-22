@@ -17,6 +17,7 @@ export default function Main() {
     const page = new State(useState('about'));
     const todo = new State(useState([]));
     const problems = new State(useState([]));
+    const conciseModels = new State(useState([]));
     const problem = new State(useState(''));
     const problemView = new State(useState('problem'));
     const typesActive = new State(useState('Set'));
@@ -25,7 +26,7 @@ export default function Main() {
     const pages = {
         about: {
             name: 'about',
-            view: <About />
+            view: <About conciseModels={conciseModels.val()} />
         },
         features: {
             name: 'features',
@@ -51,9 +52,8 @@ export default function Main() {
             problem.set(problemList[0]);
             problems.set(problemList);
         });
-        fetchJson('data/todo.json', x => {
-            todo.set(x.list);
-        });
+        fetchJson('data/concise/models.json', x => conciseModels.set(x.list));
+        fetchJson('data/todo.json', x => todo.set(x.list));
     }, [problemsdummy]);
 
     return (

@@ -45,7 +45,7 @@ export default function Var() {
                 </div>
                 <p>
                     Consider a variable <code>VarD2 x</code>, a parameter <code>ParD1 a</code> and sets <code>i</code> and <code>j</code>.
-                    Type safety helps in preventing any of the expressions on the right to compile.
+                    Type safety prevents wrong expressions on the right to compile.
                 </p>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', columnGap: '1em' }}>
                     <Code code={codeGood} className={'code-block good'} tight={true} />

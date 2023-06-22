@@ -22,7 +22,7 @@ function getView(problem, problemView) {
 }
 export default function Problem(props) {
     const { problem, problemView } = props;
-    const { dir, galleryClass } = problem;
+    const { dir } = problem;
 
     return (
         <div className="problem">

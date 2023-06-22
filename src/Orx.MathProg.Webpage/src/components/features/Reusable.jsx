@@ -33,11 +33,10 @@ export default function Reusable() {
 
             <div className='centered'>
                 <p>
-                    Every type and expression used to build a <code>MathModel</code> is immutable, composed only of <code>readonly</code> fields.
+                    Every type and expression used to build a <code>MathModel</code> is immutable.
                 </p>
                 <p>
-                    Once a set, a variable or a parameter, any mathematical expression, a constraint, an objective function
-                    or a mathematical model is defined, it will remain as it is.
+                    Once defined, it will remain as it is.
                 </p>
                 <p>
                     This makes reusing pieces of a mathematical model safer and easier.
@@ -54,7 +53,7 @@ export default function Reusable() {
                 </div>
                 <div>
                     <div className='centered'>
-                        <p>We can then simply and safely create the following model variants.</p>
+                        <p>We can then simply create the following model variants.</p>
                     </div>
                     <Code code={codeModels} className={'code-block'} />
                 </div>

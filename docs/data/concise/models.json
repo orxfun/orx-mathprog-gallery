@@ -1,0 +1,16 @@
+{
+    "list": [
+        {
+            "img": "knapsack.PNG",
+            "name": "Knapsack"
+        },
+        {
+            "img": "min_cost_network_flow.PNG",
+            "name": "Minimum Cost Network Flow"
+        },
+        {
+            "img": "shortest_path.PNG",
+            "name": "Shortest Path"
+        }
+    ]
+}

@@ -6,9 +6,7 @@ export default function TopNav() {
         <div className='topnav'>
             <code>
                 Orx.MathProg
-
             </code>
-            <img src='https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png?20180210215736' alt='csharp' title="csharp"></img>
 
             <div>
                 <a href="mailto:orx.ugur.arikan@gmail.com" title="orx.ugur.arikan@gmail.com">
