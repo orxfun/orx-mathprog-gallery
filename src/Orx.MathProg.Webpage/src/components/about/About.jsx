@@ -86,9 +86,10 @@ export default function About({ conciseModels }) {
                 <a
                     href="./img/orx_model_building_knapsack.gif"
                     target='_blank'
+                    style={{ width: "540px", height: "100%" }}
                 >
                     <img
-                        style={{ width: "540px", height: "100%" }}
+                        style={{ width: "560px", height: "100%", border: "10px solid black", borderRadius: '8px' }}
                         src={`./img/orx_model_building_knapsack-540w.gif`}
                         alt={"building & solving knapsack problem in ~7minutes"}
                         title={"building & solving knapsack problem in ~7minutes"}
@@ -101,16 +102,19 @@ export default function About({ conciseModels }) {
                         Building the traditional <a href='https://en.wikipedia.org/wiki/Knapsack_problem' target="_blank">knapsack</a> problem from scratch
                     </p>
                     <p>
-                        in ~7 minutes
+                        from importing the library into an empty console app
                     </p>
                     <p>
-                        from importing the library
+                        to modeling the problem, creating html and LaTex documentations
                     </p>
                     <p>
-                        to solving an example instance.
+                        and finally to solving an example instance
                     </p>
                     <p>
-                        <i>(click the gif to zoom in)</i>
+                        in ~7 minutes.
+                    </p>
+                    <p>
+                        <i style={{ color: 'rgb(100,100,100)' }}>(click the gif to zoom in)</i>
                     </p>
                 </div>
             </div>

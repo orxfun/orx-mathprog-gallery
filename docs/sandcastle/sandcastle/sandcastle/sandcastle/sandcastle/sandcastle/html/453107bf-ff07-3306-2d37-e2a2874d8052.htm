@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html ><html lang="en-US"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" href="../css/bulma.css" /><link rel="stylesheet" href="../css/font-awesome.min.css" /><link rel="stylesheet" href="../css/presentationStyle.css" /><link rel="stylesheet" href="../css/vs.min.css" /><script src="../scripts/jquery-3.5.1.min.js"></script><script src="../scripts/clipboard.min.js"></script><script src="../scripts/highlight.min.js"></script><script src="../scripts/presentationStyle.js"></script><title>MathModelSolution Methods</title><meta name="Title" content="Methods" /><meta name="Help.Id" content="Methods.T:Orx.MathProg.Solvers.MathModelSolution" /><meta name="Help.ContentType" content="Reference" /><meta name="container" content="Orx.MathProg.Solvers" /><meta name="guid" content="453107bf-ff07-3306-2d37-e2a2874d8052" /><meta name="tocFile" content="../toc/IDCC.xml" /></head><body><div class="fixedLayout"><div id="Header" class="fixedHeader"><div class="pageHeader level mb-0 py-2 px-4"><div id="TitleContainer" class="level-left"><div id="DocumentationTitle" class="level-item">Orx.MathProg (C#)</div></div><div id="LangFilterSearchContainer" class="level-right"><div class="level-item"><div class="dropdown is-hoverable"><div class="dropdown-trigger"><button class="button" aria-haspopup="true" aria-controls="dropdown-menu"><span id="CurrentLanguage"></span><span class="icon is-small"><i class="fa fa-angle-down" aria-hidden="true"></i></span></button></div><div class="dropdown-menu" role="menu"><div id="LanguageSelections" class="dropdown-content"><a class="dropdown-item languageFilterItem" data-languageId="cs">C#</a></div></div></div></div><div class="level-item"><form id="SearchForm" action="#" onsubmit="TransferToSearchPage(); return false;"><div class="field"><div class="control has-icons-left"><input id="SearchTerms" class="input" type="text" maxlength="200" placeholder="Search" /><span class="icon is-small is-left"><i class="fa fa-search"></i></span><button id="SearchButton" type="submit" class="is-hidden"></button></div></div></form></div></div></div></div><div class="fixedContent"><nav class="breadcrumb my-1 px-2 border-bottom" role="navigation"><ul id="TopicBreadcrumbs" /></nav><div class="columns pl-5 pr-5 fixedContent"><div id="ShowHideTOCColumn" class="column is-hidden-tablet"><a id="ShowHideTOC">Show/Hide TOC</a></div><div id="TOCColumn" class="column is-hidden-mobile"><nav class="toc"><ul id="TableOfContents" class="toc-menu" /></nav></div><div id="TopicContent" class="column content is-7"><h1>Math<wbr />Model<wbr />Solution Methods</h1><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>Methods</h2><div id="IDADASection"><table id="MethodList" class="table is-hoverable"><tr><td><a href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)" target="_blank" rel="noopener noreferrer">Equals</a></td><td><br />(Inherited from <a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>)</td></tr><tr><td><a href="https://learn.microsoft.com/dotnet/api/system.object.finalize#system-object-finalize" target="_blank" rel="noopener noreferrer">Finalize</a></td><td><br />(Inherited from <a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>)</td></tr><tr><td><a href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode#system-object-gethashcode" target="_blank" rel="noopener noreferrer">GetHashCode</a></td><td><br />(Inherited from <a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>)</td></tr><tr><td><a href="https://learn.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype" target="_blank" rel="noopener noreferrer">GetType</a></td><td><br />(Inherited from <a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>)</td></tr><tr><td><a href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone#system-object-memberwiseclone" target="_blank" rel="noopener noreferrer">MemberwiseClone</a></td><td><br />(Inherited from <a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>)</td></tr><tr><td><a href="e9e33a18-7d9b-ae43-6ccf-deddfec6cd86.htm">Summary</a></td><td>
+            Returns text summarizing the solution.
+            For instance:
+            
+            <div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs">var resSolution = await solver.Solve(model, pars);
+MathModelSolution solution = resSolution.Unwrap(); // normally, check if it is 'IsOk' before unwrapping!
+Console.WriteLine(solution.Summary());</code></pre></div></div>
+            
+            logs the following to the console:
+            <div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs">model                      : dummy model
+solution exists            ? True
+status                     : integer optimal solution
+objective value            : Some(12)
+# variables (lp)           : 12
+# variables (sol)          : 12
+# non-zero variables (sol) : 12</code></pre></div></div></td></tr><tr><td><a href="https://learn.microsoft.com/dotnet/api/system.object.tostring#system-object-tostring" target="_blank" rel="noopener noreferrer">ToString</a></td><td><br />(Inherited from <a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>)</td></tr><tr><td><a href="326ecc09-1707-a832-e644-45e8ab202346.htm">ValueOf</a></td><td>
+            Returns Some of the value of the 0-dimensional variable provided that:
+            <ul><li>the solution <a href="26273061-9a5e-35bb-7107-2bc5209e74f9.htm">IsFeasible</a>, and</li><li>the queried <span class="parameter">var</span> belongs to the solved model.</li></ul>
+            
+            Returns None otherwise.
+            
+            <div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs">VarD0 fitness = Variable("fit").IsBinary(); // irrelevant to the model
+VarD0 utility = Variable("util").IsBinary();
+Objective maxUtility = maximize | utility;
+MathModel model = MathModel.New().WithObjective(maxUtility).HasNoConstraints();
+Scip solver = new();
+var resSolution = await solver.Solve(model);
+MathModelSolution solution = resSolution.Unwrap(); // normally, check if it is 'IsOk' before unwrapping!
+
+var valUtility = solution.ValueOf(utility);
+Assert.Equal(Some(1), valUtility); // alternatively:
+Assert.True(valUtility.IsSome);
+Assert.True(1, valUtility.Unwrap());
+
+var valFitness = solution.ValueOf(fitness);
+Assert.True(valFitness.IsNone); // "valFitness.Unwrap()" would've thrown!</code></pre></div></div></td></tr><tr><td><a href="37c11ede-57bd-e7a0-5df8-3fa938ebf1cd.htm">VarIndicesAndValuesOf(VarD1)</a></td><td>
+            Returns Some of a map of indices to solution values of 1-dimensional variable provided that:
+            <ul><li>the solution <a href="26273061-9a5e-35bb-7107-2bc5209e74f9.htm">IsFeasible</a>, and</li><li>the queried <span class="parameter">var</span> belongs to the solved model.</li></ul>
+            
+            Returns None otherwise.
+            
+            <div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs">Set i = Set("i").HasElementsUntil(3); // { 0, 1, 2 }
+VarD1 x = Variable("x").HasIndices(i).IsBinary();
+Objective maxXs = maximize | sum(over(i), x[i]);
+MathModel model = MathModel.New().WithObjective(maxXs).HasNoConstraints();
+Cplex solver = new();
+var resSolution = await solver.Solve(model);
+MathModelSolution solution = resSolution.Unwrap(); // normally, check if it is 'IsOk' before unwrapping!
+
+VarD1 y = Variable("y").HasIndices(i).IsBinary(); // irrelevant to the model
+
+var maybeXSoln = solution.VarIndicesAndValuesOf(x);
+Assert.True(maybeXSoln.IsSome);
+
+Dictionary&lt;int, double&gt; xSoln = maybeXSoln.Unwrap(); // a map from indices of x to the values in the solution
+Assert.Equal(1, xSoln[0]);
+Assert.Equal(1, xSoln[1]);
+Assert.Equal(1, xSoln[2]);
+Assert.False(xSoln.ContainsKey(3)); // x(3) is not a part of the model and solution
+
+var maybeYSoln = solution.VarIndicesAndValuesOf(y); // y is not a part of this solution
+Assert.True(maybeYSoln.IsNone); // "maybeYSoln.Unwrap()" would've thrown!</code></pre></div></div></td></tr><tr><td><a href="1ee7d3e9-db43-149f-3d85-d3cd40b15bfa.htm">VarIndicesAndValuesOf(VarD2)</a></td><td>
+            Returns Some of a map of indices to solution values of 2-dimensional variable provided that:
+            <ul><li>the solution <a href="26273061-9a5e-35bb-7107-2bc5209e74f9.htm">IsFeasible</a>, and</li><li>the queried <span class="parameter">var</span> belongs to the solved model.</li></ul>
+            
+            Returns None otherwise.
+            
+            <div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs">Set i = Set("i").HasElementsUntil(2); // { 0, 1 }
+Set j = Set("j").HasElementsUntil(3); // { 0, 1, 2 }
+VarD2 x = Variable("x").HasIndices(i, j).IsBinary();
+Objective maxCount = maximize | sum(over(i, j), x[i, j]);
+MathModel model = MathModel.New().WithObjective(maxCount).HasNoConstraints();
+Cplex solver = new();
+var resSolution = await solver.Solve(model);
+MathModelSolution solution = resSolution.Unwrap(); // normally, check if it is 'IsOk' before unwrapping!
+
+VarD2 y = Variable("y").HasIndices(i, j).IsBinary(); // irrelevant to the model
+
+var maybeXSoln = solution.VarIndicesAndValuesOf(x);
+Assert.True(maybeXSoln.IsSome);
+
+Dictionary&lt;(int, int), double&gt; xSoln = maybeXSoln.Unwrap(); // a map from indices of x to the values in the solution
+Assert.Equal(1, xSoln[(0, 0)]);
+Assert.Equal(1, xSoln[(0, 1)]);
+Assert.Equal(1, xSoln[(0, 2)]);
+Assert.Equal(1, xSoln[(1, 0)]);
+Assert.Equal(1, xSoln[(1, 1)]);
+Assert.Equal(1, xSoln[(1, 2)]);
+Assert.False(xSoln.ContainsKey((1, 3))); // x(1, 3) is not a part of the model and solution
+
+var maybeYSoln = solution.VarIndicesAndValuesOf(y); // y is not a part of this solution
+Assert.True(maybeYSoln.IsNone); // "maybeYSoln.Unwrap()" would've thrown!</code></pre></div></div></td></tr><tr><td><a href="ae29d321-f9fb-a782-73c8-58d969d94159.htm">VarIndicesAndValuesOf(VarD3)</a></td><td>
+            Returns Some of a map of indices to solution values of 3-dimensional variable provided that:
+            <ul><li>the solution <a href="26273061-9a5e-35bb-7107-2bc5209e74f9.htm">IsFeasible</a>, and</li><li>the queried <span class="parameter">var</span> belongs to the solved model.</li></ul>
+            
+            Returns None otherwise.
+            
+            <p>
+            See <a href="1ee7d3e9-db43-149f-3d85-d3cd40b15bfa.htm">VarIndicesAndValuesOf(VarD2)</a> for a documentation corresponding to two-index variables.
+            </p></td></tr></table></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>See Also</h2><div id="seeAlsoSection"><h4>Reference</h4><div><a href="e7c5b5e2-5665-3068-389f-08fb689ff270.htm">MathModelSolution Class</a></div><div><a href="81a0e270-4602-76e0-3bd4-d743ad0e1edf.htm">Orx.MathProg.Solvers Namespace</a></div></div></div><div id="InThisArticleColumn" class="column is-hidden-mobile"><nav class="menu sticky is-hidden"><p class="menu-label"><strong>In This Article</strong></p><ul id="InThisArticleMenu" class="menu-list"><li><a class="quickLink">Methods</a></li><li><a class="quickLink">See Also</a></li></ul></nav></div></div></div><footer id="PageFooter" class="footer border-top py-3 fixedFooter"><div class="columns"><div class="column">https://github.com/orxfun/orx-mathprog-gallery<div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:orx.ugur.arikan%40gmail.com?Subject=Orx.MathProg%20(C#)">orx.ugur.arikan@gmail.com</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script> 
+				</div><div class="column"> 
+				</div></div></footer></div><script>$(function(){
+SetDefaultLanguage("cs");
+LoadTocFile(null, null);
+InitializeQuickLinks();
+
+$(".toggleSection" ).click(function () {
+    SectionExpandCollapse(this);
+});
+
+$(".toggleSection").keypress(function () {
+    SectionExpandCollapseCheckKey(this, event)
+});
+hljs.highlightAll();
+});</script></body></html>
