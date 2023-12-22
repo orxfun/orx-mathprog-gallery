@@ -16,11 +16,7 @@ export default function About({ conciseModels }) {
                         which aims to get as close as possible to writing the mathematical program with paper and pen.
                     </p>
                     <p>
-                        In order to do so, it avoids
-                        boilerplate,
-                        verbose expressions,
-                        complex constructors
-                        and mutability
+                        In order to do so, it avoids boilerplate, verbose expressions, complex constructors and mutability
                     </p>
                     <p>
                         Finally, it emphasizes the separation of data from the model.
@@ -84,6 +80,39 @@ export default function About({ conciseModels }) {
                     </div>
                 </div>
                 <img src='./img/checklist.png'></img>
+            </div>
+
+            <div className='section'>
+                <a
+                    href="./img/orx_model_building_knapsack.gif"
+                    target='_blank'
+                >
+                    <img
+                        style={{ width: "540px", height: "100%" }}
+                        src={`./img/orx_model_building_knapsack-540w.gif`}
+                        alt={"building & solving knapsack problem in ~7minutes"}
+                        title={"building & solving knapsack problem in ~7minutes"}
+                    />
+                </a>
+                <div>
+                    <h2>in action</h2>
+                    <br />
+                    <p>
+                        Building the traditional <a href='https://en.wikipedia.org/wiki/Knapsack_problem' target="_blank">knapsack</a> problem from scratch
+                    </p>
+                    <p>
+                        in ~7 minutes
+                    </p>
+                    <p>
+                        from importing the library
+                    </p>
+                    <p>
+                        to solving an example instance.
+                    </p>
+                    <p>
+                        <i>(click the gif to zoom in)</i>
+                    </p>
+                </div>
             </div>
         </div>
     )

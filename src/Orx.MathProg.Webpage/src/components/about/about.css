@@ -13,7 +13,7 @@
     column-gap: 5em;
 }
 
-.about .section:nth-child(2) {
+.about .section:nth-child(2n) {
     text-align: right;
     display: grid;
     grid-template-columns: 10em 1fr;

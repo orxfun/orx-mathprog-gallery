@@ -22,7 +22,13 @@ export default function Builders() {
                 </p>
             </div>
 
-            <img className="gif" src='./img/builder-pattern.gif'></img>
+            <img
+                className="gif"
+                src='./img/orx_model_building_knapsack.gif'
+                alt={"building & solving knapsack problem in ~7minutes"}
+                title={"building & solving knapsack problem in ~7minutes"}
+            >
+            </img>
         </div>
     )
 }
