@@ -21,7 +21,7 @@ export default function Main() {
     const problem = new State(useState(''));
     const problemView = new State(useState('problem'));
     const typesActive = new State(useState('Set'));
-    const featuresActive = new State(useState('Concise'));
+    const featuresActive = new State(useState('Builders'));
 
     const pages = {
         about: {

@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html ><html lang="en-US"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" href="../css/bulma.css" /><link rel="stylesheet" href="../css/font-awesome.min.css" /><link rel="stylesheet" href="../css/presentationStyle.css" /><link rel="stylesheet" href="../css/vs.min.css" /><script src="../scripts/jquery-3.5.1.min.js"></script><script src="../scripts/clipboard.min.js"></script><script src="../scripts/highlight.min.js"></script><script src="../scripts/presentationStyle.js"></script><title>ParD2 Properties</title><meta name="Title" content="Properties" /><meta name="Help.Id" content="Properties.T:Orx.MathProg.ParD2" /><meta name="Help.ContentType" content="Reference" /><meta name="container" content="Orx.MathProg" /><meta name="guid" content="cc214769-9bd7-4be5-9a56-ae05e9c0ffa9" /><meta name="tocFile" content="../toc/ID0CB0A.xml" /></head><body><div class="fixedLayout"><div id="Header" class="fixedHeader"><div class="pageHeader level mb-0 py-2 px-4"><div id="TitleContainer" class="level-left"><div id="DocumentationTitle" class="level-item">Orx.MathProg (C#)</div></div><div id="LangFilterSearchContainer" class="level-right"><div class="level-item"><div class="dropdown is-hoverable"><div class="dropdown-trigger"><button class="button" aria-haspopup="true" aria-controls="dropdown-menu"><span id="CurrentLanguage"></span><span class="icon is-small"><i class="fa fa-angle-down" aria-hidden="true"></i></span></button></div><div class="dropdown-menu" role="menu"><div id="LanguageSelections" class="dropdown-content"><a class="dropdown-item languageFilterItem" data-languageId="cs">C#</a></div></div></div></div><div class="level-item"><form id="SearchForm" action="#" onsubmit="TransferToSearchPage(); return false;"><div class="field"><div class="control has-icons-left"><input id="SearchTerms" class="input" type="text" maxlength="200" placeholder="Search" /><span class="icon is-small is-left"><i class="fa fa-search"></i></span><button id="SearchButton" type="submit" class="is-hidden"></button></div></div></form></div></div></div></div><div class="fixedContent"><nav class="breadcrumb my-1 px-2 border-bottom" role="navigation"><ul id="TopicBreadcrumbs" /></nav><div class="columns pl-5 pr-5 fixedContent"><div id="ShowHideTOCColumn" class="column is-hidden-tablet"><a id="ShowHideTOC">Show/Hide TOC</a></div><div id="TOCColumn" class="column is-hidden-mobile"><nav class="toc"><ul id="TableOfContents" class="toc-menu" /></nav></div><div id="TopicContent" class="column content is-7"><h1>Par<wbr />D<wbr />2 Properties</h1><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>Properties</h2><div id="IDADASection"><table id="PropertyList" class="table is-hoverable"><tr><td><a href="91d62d8d-48a2-2235-ef13-36b2f2b2de0d.htm">Definition</a></td><td>
+    
+            Definition of the variable.
+            
+  </td></tr><tr><td><a href="bbf5fa65-ff9c-31ed-1a8f-559e093d2e91.htm">Dimension</a></td><td>
+    
+            Dimension of the parameter symbol.
+            
+  </td></tr><tr><td><a href="21832659-ba66-2687-5a3b-f666b8f84cd9.htm">Item</a></td><td>
+            Returns the parametr's value at the (i,j)-th position.
+            Note that the indices can be any scalar (constant for the mathematical model) expression.
+            
+            <p>Consider for instance</p><div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs">Set i = ...;
+Set j = ...;
+ParD2 cost = Parameter("cost").Represents("cost of unit flow on arc (i,j)").HasIndices(i, j).HasValues(1);</code></pre></div></div>
+            
+            Then:
+            <ul><li>cost[0, 1] is the unit flow cost of arc (0, 1),</li><li>cost[i, j] is the unit flow cost of arc (i, j),</li><li>cost[0, j] is the unit flow cost of arc (0, j),</li><li>cost[source[c], j] is the unit flow cost of arc (source[c], j), where source[c] is the source node of commodity c.</li></ul></td></tr><tr><td><a href="f145fbc3-fd2d-305e-2200-2abf2dca2f91.htm">Key</a></td><td>
+    
+            Key of the variable.
+            
+  </td></tr><tr><td><a href="23abcdbb-db45-ab1a-290f-a96efcd8b247.htm">ValuesDefinition</a></td><td>
+    
+            Definition of source of values of the parameter.
+            
+  </td></tr></table></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>See Also</h2><div id="seeAlsoSection"><h4>Reference</h4><div><a href="6915174e-9e72-a17c-24b5-b175f52d09f1.htm">ParD2 Class</a></div><div><a href="b58113de-60d8-4f5d-76d7-a9e96ffb2213.htm">Orx.MathProg Namespace</a></div></div></div><div id="InThisArticleColumn" class="column is-hidden-mobile"><nav class="menu sticky is-hidden"><p class="menu-label"><strong>In This Article</strong></p><ul id="InThisArticleMenu" class="menu-list"><li><a class="quickLink">Properties</a></li><li><a class="quickLink">See Also</a></li></ul></nav></div></div></div><footer id="PageFooter" class="footer border-top py-3 fixedFooter"><div class="columns"><div class="column">https://github.com/orxfun/orx-mathprog-gallery<div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:orx.ugur.arikan%40gmail.com?Subject=Orx.MathProg%20(C#)">orx.ugur.arikan@gmail.com</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script> 
+				</div><div class="column"> 
+				</div></div></footer></div><script>$(function(){
+SetDefaultLanguage("cs");
+LoadTocFile(null, null);
+InitializeQuickLinks();
+
+$(".toggleSection" ).click(function () {
+    SectionExpandCollapse(this);
+});
+
+$(".toggleSection").keypress(function () {
+    SectionExpandCollapseCheckKey(this, event)
+});
+hljs.highlightAll();
+});</script></body></html>
